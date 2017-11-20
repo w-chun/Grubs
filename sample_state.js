@@ -46,8 +46,9 @@
         id: 10,
         body: "It was such a good dining experience and execellent service",
         author_id: 15,
-        business_id:
+        business_id: 15
       }
+      ...
     }
   },
   ui: {
