@@ -9,12 +9,15 @@ const mapStateToProps = (state, ownProps) => ({
   formType: ownProps.location.pathname === "/login" ? "login" : "signup"
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  const action = ownProps.formType === "login" ? login : signup;
-  return {
-    processForm: user => dispatch(action(user))
-  };
-};
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  processForm: (user, formType) => {
+    if (formType === "login") {
+      return dispatch(login(user));
+    } else {
+      return dispatch(signup(user));
+    }
+  }
+});
 
 export default withRouter(connect(
   mapStateToProps,

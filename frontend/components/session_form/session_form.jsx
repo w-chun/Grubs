@@ -24,32 +24,23 @@ class SessionForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    const user = this.state;
-    this.props.processForm({user}, this.state.formType);
+    const user = Object.assign({},this.state);
+    this.props.processForm(user, this.props.formType);
   }
 
-  navLink() {
-    if (this.props.formType === 'login') {
-      return <Link to="/signup">Sign up</Link>;
-    } else {
-      return <Link to="/login">Log in</Link>;
-    }
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
-
-  // renderErrors() {
-  //   return(
-  //     <ul>
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
 
   render(){
-    const {formType} = this.props;
     let button;
     let message;
     let navLogin;
@@ -74,26 +65,27 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <Link to="/">Home</Link>
-        <h2>{message}</h2>
-        {navLogin}
-        <form onSubmit={this.state.handleSubmit} className="login-form-box">
-          <div className="login-form">
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update("username")} />
-            </label>
-            {emailForm}
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update("password")} />
-            </label>
+        {this.renderErrors()}
+        <div className="login-form">
+          <h2>{message}</h2>
+          {navLogin}
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+              <label>Username:
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update("username")} />
+              </label>
+              {emailForm}
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")} />
+              </label>
 
-            <input type="submit" value={button} />
-          </div>
-        </form>
-        {navSignup}
+              <input type="submit" value={button} />
+          </form>
+          {navSignup}
+        </div>
       </div>
 
     );
