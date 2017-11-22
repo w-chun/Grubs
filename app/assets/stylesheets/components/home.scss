@@ -1,0 +1,26 @@
+.nav-center{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-home {
+  display: flex;
+  background-color: #d32323;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+
+.home-container {
+  width: 100vw;
+  height: 600px;
+  background-image: url("https://static.pexels.com/photos/299347/pexels-photo-299347.jpeg");
+  background-size: 100%;
+  background-position: center;
+}

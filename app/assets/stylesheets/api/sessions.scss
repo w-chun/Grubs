@@ -7,23 +7,15 @@ body {
   font-family: helvetica
 }
 
-.nav-center{
-  width: 300px;
+.nav-bar{
   display: flex;
-  align-items: center;
+  width: 100%;
   justify-content: center;
-}
-
-.nav-bar {
-  display: flex;
   background-color: #d32323;
-  justify-content: space-between;
 }
 
-.title {
-  display: flex;
-  color: white;
-  text-decoration: none;
+.grubs-link {
+  text-align: center;
 }
 
 .login-link {
