@@ -56,19 +56,18 @@ class SessionForm extends React.Component {
           onChange={this.update("email")} />
         </label>
       );
-      navLogin = (<p>Already on Grubs? <Link to='/login'>Log In</Link></p>);
+      navLogin = (<p>Already on Grubs? <Link className="nav-login-link" to='/login'>Log In</Link></p>);
     } else {
       button = 'Log In';
       message = 'Log In to Grubs';
-      navSignup = (<p>New to Grubs? <Link to='signup'>Sign Up</Link></p>);
+      navSignup = (<p>New to Grubs? <Link className="nav-login-signup" to='signup'>Sign Up</Link></p>);
     }
     return (
       <div className="login-form-container">
-        <Link to="/">Home</Link>
         {this.renderErrors()}
         <div className="login-form">
-          <h2>{message}</h2>
-          {navLogin}
+          <h2 className="message">{message}</h2>
+          <div className="nav-login">{navLogin}</div>
           <form onSubmit={this.handleSubmit} className="login-form-box">
               <label>Username:
                 <input type="text"
@@ -82,9 +81,13 @@ class SessionForm extends React.Component {
                   onChange={this.update("password")} />
               </label>
 
-              <input type="submit" value={button} />
+              <input type="submit" value={button} className="button"/>
           </form>
-          {navSignup}
+          <div className="nav-signup">{navSignup}</div>
+
+          <div className="session-img">
+            <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
+          </div>
         </div>
       </div>
 

@@ -1,3 +1,158 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0px;
+  font-family: helvetica
+}
+
+.nav-center{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: #d32323;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+
+.login-link {
+  text-decoration: none;
+  padding: 9px 12px 10px;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.login-link:hover {
+  border-bottom: 2px solid white;
+}
+
+.signup-link {
+  text-decoration: none;
+  border: 2px solid white;
+  color: #fff;
+  border-radius: 4px;
+  padding: 7px 24px 8px;
+  font-size: 14px
+}
+
+.signup-link:hover {
+  background-color: #fff;
+  color: #666;
+}
+
+.logout {
+  margin-bottom: 10px;
+  background-color: #d32323;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 7px 24px 8px;
+  font-size: 14px
+}
+
+.logout:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #666;
+}
+
+.session-links {
+  display: flex;
+}
+
+.session-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.session-form {
+  display: flex;
+  max-width: 800px;
+  min-height: 700px;
+  margin-top: 30px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.session-img {
+  display: flex;
+}
+
+.nav-login {
+  text-align: center;
+}
+
+.nav-login-link {
+  text-decoration: none;
+}
+
+.nav-login-link:hover {
+  text-decoration: underline;
+}
+
+.nav-signup {
+  text-align: right;
+}
+
+.nav-login-signup {
+  text-decoration: none;
+}
+
+.nav-login-signup:hover {
+  text-decoration: underline;
+}
+
+
+.login-form-container {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form-box input{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 2px;
+  border: solid 1px black;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.message {
+  color: #d32323;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: helvetica;
+  text-align: center;
+}
+
+.button {
+  background-color: #d32323;
+  border-color: #8d0005;
+  color: white;
+  cursor: pointer;
+  font-weight: 700px;
+}
+
+
+.button:hover {
+  background-color: #c91400;
+}
