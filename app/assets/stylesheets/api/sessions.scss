@@ -18,48 +18,6 @@ body {
   text-align: center;
 }
 
-.login-link {
-  text-decoration: none;
-  padding: 9px 12px 10px;
-  margin-right: 10px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.login-link:hover {
-  border-bottom: 2px solid white;
-}
-
-.signup-link {
-  text-decoration: none;
-  border: 2px solid white;
-  color: #fff;
-  border-radius: 4px;
-  padding: 7px 24px 8px;
-  font-size: 14px
-}
-
-.signup-link:hover {
-  background-color: #fff;
-  color: #666;
-}
-
-.logout {
-  margin-bottom: 10px;
-  background-color: #d32323;
-  border: 2px solid white;
-  border-radius: 4px;
-  padding: 7px 24px 8px;
-  font-size: 14px
-}
-
-.logout:hover {
-  cursor: pointer;
-  background-color: #fff;
-  color: #666;
-}
-
 .session-links {
   display: flex;
 }
@@ -72,16 +30,16 @@ body {
 
 .session-form {
   display: flex;
-  max-width: 800px;
+  max-width: 1000px;
   min-height: 700px;
   margin-top: 30px;
   padding: 0 15px;
   box-sizing: border-box;
-  border: 1px solid black;
 }
 
 .session-img {
-  display: flex;
+  margin: auto;
+  padding-left: 150px;
 }
 
 .nav-login {
@@ -111,7 +69,7 @@ body {
 
 .login-form-container {
   display: flex;
-  width: 400px;
+  width: 40%;
   flex-direction: column;
   justify-content: center;
 }

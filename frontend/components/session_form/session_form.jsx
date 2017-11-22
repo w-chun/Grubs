@@ -65,35 +65,37 @@ class SessionForm extends React.Component {
     return (
       <div className="session-form-container">
         <header className="nav-bar">
-          <div className="grubs-link"><h1><Link to="/" className="title">Grubs</Link></h1></div>
+          <div className="grubs-link">
+            <h1><Link to="/" className="title">Grubs</Link></h1>
+          </div>
         </header>
         <div className="session-form">
           <div className="login-form-container">
             {this.renderErrors()}
-            <div className="login-form">
-              <h2 className="message">{message}</h2>
-              <div className="nav-login">{navLogin}</div>
-              <form onSubmit={this.handleSubmit} className="login-form-box">
-                  <label>Username:
-                    <input type="text"
-                      value={this.state.username}
-                      onChange={this.update("username")} />
-                  </label>
-                  {emailForm}
-                  <label>Password:
-                    <input type="password"
-                      value={this.state.password}
-                      onChange={this.update("password")} />
-                  </label>
+              <div className="login-form">
+                <h2 className="message">{message}</h2>
+                <div className="nav-login">{navLogin}</div>
+                <form onSubmit={this.handleSubmit} className="login-form-box">
+                    <label>Username:
+                      <input type="text"
+                        value={this.state.username}
+                        onChange={this.update("username")} />
+                    </label>
+                    {emailForm}
+                    <label>Password:
+                      <input type="password"
+                        value={this.state.password}
+                        onChange={this.update("password")} />
+                    </label>
 
-                  <input type="submit" value={button} className="button"/>
-              </form>
-              <div className="nav-signup">{navSignup}</div>
+                    <input type="submit" value={button} className="button"/>
+                </form>
+                <div className="nav-signup">{navSignup}</div>
+              </div>
             </div>
             <div className="session-img">
               <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
             </div>
-          </div>
         </div>
       </div>
     );

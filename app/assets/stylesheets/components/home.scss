@@ -1,26 +1,96 @@
 .nav-center{
-  width: 300px;
   display: flex;
+  width: 1000px;
+  margin: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .nav-home {
   display: flex;
-  background-color: #d32323;
-  justify-content: space-between;
+  height: 100px;
+  background-color: transparent;
 }
 
 .title {
   display: flex;
   color: white;
   text-decoration: none;
+  font-family: 'Lobster';
+  font-size: 50px;
+  // font-family: 'Anton', sans-serif;
+}
+
+.title-link {
+  width: 300px;
+  margin: auto;
+}
+
+
+.login-link {
+  text-decoration: none;
+  padding: 9px 12px 10px;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.login-link:hover {
+  border-bottom: 2px solid white;
+}
+
+.signup-link {
+  text-decoration: none;
+  border: 2px solid white;
+  color: #fff;
+  border-radius: 4px;
+  padding: 7px 24px 8px;
+  font-size: 14px
+}
+
+.signup-link:hover {
+  background-color: #fff;
+  color: #666;
+}
+
+.greeting {
+  display: flex;
+  font-family: Anton;
+  color: white;
+}
+
+.current-user {
+  display: flex;
+  padding-right: 10px;
+}
+
+.home-logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 7px 24px 8px;
+  font-size: 14px;
+  color: white;
+}
+
+.logout-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #666;
 }
 
 .home-container {
   width: 100vw;
   height: 600px;
-  background-image: url("https://static.pexels.com/photos/299347/pexels-photo-299347.jpeg");
+  background-image: url("https://static.pexels.com/photos/106343/pexels-photo-106343.jpeg");
   background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }

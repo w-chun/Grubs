@@ -11,10 +11,9 @@ export default class Home extends React.Component {
     return (
       <div className="home-container">
         <header className="nav-home">
-          <div className="nav-center"></div>
-          <div className="nav-center"><h1><Link to="/" className="title">Grubs</Link></h1></div>
           <div className="nav-center"><GreetingContainer /></div>
         </header>
+        <div className="title-link"><h1><Link to="/" className="title">Grubs</Link></h1></div>
       </div>
     );
   }
