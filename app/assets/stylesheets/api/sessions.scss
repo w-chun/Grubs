@@ -39,15 +39,18 @@ body {
 
 .session-img {
   margin: auto;
-  padding-left: 150px;
+  padding-left: 100px;
 }
 
 .nav-login {
   text-align: center;
+  font-weight: 700px;
+  font-size: 12px;
 }
 
 .nav-login-link {
   text-decoration: none;
+  color: #0073bb;
 }
 
 .nav-login-link:hover {
@@ -56,10 +59,13 @@ body {
 
 .nav-signup {
   text-align: right;
+  color: #999;
+  font-size: 12px;
 }
 
 .nav-login-signup {
   text-decoration: none;
+  color: #0073bb;
 }
 
 .nav-login-signup:hover {
@@ -69,15 +75,16 @@ body {
 
 .login-form-container {
   display: flex;
-  width: 40%;
+  width: 30%;
   flex-direction: column;
   justify-content: center;
 }
 
 .login-form-box input{
+  padding: 10px;
   margin-top: 10px;
   margin-bottom: 5px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 2px;
   border: solid 1px black;
   width: 100%;
@@ -104,4 +111,24 @@ body {
 
 .button:hover {
   background-color: #c91400;
+}
+
+.demo-login {
+  background-color: #3b5998;
+  border-color: #263961;
+  color: white;
+  font-size: 14px;
+  font-weight: 700px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  border: solid 1px black;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.demo-login:hover {
+  cursor: pointer;
+  background-color: #3B5982
 }
