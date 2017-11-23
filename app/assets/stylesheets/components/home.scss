@@ -13,11 +13,12 @@
 }
 
 .title {
-  display: flex;
+  display: block;
   color: white;
   text-decoration: none;
   font-family: 'Lobster';
   font-size: 50px;
+  text-align: center;
 }
 
 .title-link {
