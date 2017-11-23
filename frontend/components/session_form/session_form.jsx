@@ -34,23 +34,30 @@ class SessionForm extends React.Component {
     this.props.processForm(user, this.props.formType);
   }
 
-  handleErrors(e){
-    e.preventDefault();
-    this.props.clearErrors();
+  handleErrors(){
+    return (e) => {
+      e.preventDefault();
+      this.props.clearErrors();
+    };
   }
 
   renderErrors() {
-    return(
-      <div className="errors">
-        <ul>
-          {this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
-              {error}
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
+    if (this.props.errors.length > 0) {
+     return (
+        <div className="errors">
+          <ul className="list-errors">
+            {this.props.errors.map((error, i) => (
+              <li key={`error-${i}`}>
+                {error}
+              </li>
+            ))}
+          </ul>
+          <div className="close-errors">
+            <div className="close-button" onClick={this.handleErrors()}>&times;</div>
+          </div>
+        </div>
+      );
+    }
   }
 
   handleDemo() {
@@ -102,9 +109,9 @@ class SessionForm extends React.Component {
             <h1><Link to="/" className="title">Grubs</Link></h1>
           </div>
         </header>
+        {this.renderErrors()}
         <div className="session-form">
           <div className="login-form-container">
-            {this.renderErrors()}
               <div className="login-form">
                 <h2 className="message">{message}</h2>
                 <div className="nav-login" onClick={this.handleErrors}>{navLogin}</div>

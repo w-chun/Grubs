@@ -31,7 +31,7 @@ body {
 .session-form {
   display: flex;
   max-width: 1000px;
-  min-height: 700px;
+  min-height: 500px;
   margin-top: 30px;
   padding: 0 15px;
   box-sizing: border-box;
@@ -131,4 +131,34 @@ body {
 .demo-login:hover {
   cursor: pointer;
   background-color: #3B5982
+}
+
+.errors {
+  display: flex;
+  background-color: #fcd6d3;
+  padding: 15px 15px 15px 24px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 1000px;
+  font-size: 16px;
+  justify-content: space-between;
+}
+
+.list-errors {
+  list-style: none;
+}
+
+.close-errors {
+  display: flex;
+}
+
+.close-button {
+  position: relative;
+  float: right;
+  font-size: 24px;
+  margin-top: -3px;
+  cursor: pointer;
+  color: #666;
+  opacity: 0.5;
 }
