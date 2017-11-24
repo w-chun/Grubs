@@ -62,7 +62,17 @@
 
 .current-user {
   display: flex;
-  padding-right: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-pic {
+  padding: 10px 10px 0px 10px;
+}
+
+.current-user h3 {
+  margin: 0
 }
 
 .home-logout {

@@ -10,13 +10,16 @@ const sessionLinks = () => (
 
 const personalGreeting = (currentUser, logout) => (
   <header className="greeting">
-    <div className="current-user"><h2>Hi, {currentUser.username}!</h2></div>
+    <div className="current-user">
+      <div className="profile-pic"><img src={currentUser.img_url}/></div>
+      <h3>{currentUser.username}</h3>
+     </div>
     <div className="home-logout"><button className="logout-button" onClick={logout}>Log Out</button></div>
   </header>
 );
 
-const Greeting = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
-);
+const Greeting = ({ currentUser, logout }) => {
+  return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();
+};
 
 export default Greeting;

@@ -12,7 +12,8 @@ class SessionForm extends React.Component {
     } : {
       username: "",
       email: "",
-      password: ""
+      password: "",
+      img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
