@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.business-show-container {
+.business-info-left{
   display: flex;
+}
+
+.business-image img{
+  margin-right: 10px;
+}
+
+.business-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.business-address {
+  width: 40%;
+  justify-content: flex-end;
+  list-style: none;
 }

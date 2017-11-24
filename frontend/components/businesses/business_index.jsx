@@ -12,7 +12,7 @@ export default class BusinessIndex extends React.Component {
   render() {
     const businesses = this.props.businesses;
     const businessesList = Object.keys(businesses).map(business => {
-      return <IndexItem key={business.id} business={businesses[business]}/>;
+      return <IndexItem key={`index-${business}`} business={businesses[business]}/>;
     });
     if (!businesses) {
       return (
@@ -27,9 +27,14 @@ export default class BusinessIndex extends React.Component {
         return (
           <div className="business-index-container">
             <HeaderContainer />
+            <div className="filters">Filters</div>
             <div className="business-index">
-              {businessesList}
+              <div className="business-list">{businessesList}</div>
+              <div>
+                Map
+              </div>
             </div>
+
           </div>
         );
       }

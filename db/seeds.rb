@@ -16,3 +16,6 @@ Business.destroy_all
 business1 = Business.create(name: "Benu", address: "22 Hawthone St", city: "San Francisco", state: "CA",
   zipcode: 94105, phone: "(415) 685-4860", url: "https://www.benusf.com", latitude: 37.7855144, longitude: -122.398951,
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_100/v1511479405/benu_lvifbp.jpg")
+business2 = Business.create(name: "KUSAKABE", address: "584 Washington St", city: "San Francisco", state: "CA",
+  zipcode: 94111, phone: "(415) 757-0155", url: "kusakabe-sf.com", latitude: 37.795669, longitude: -122.402900,
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_100/v1511558624/kusakabe_fernzd.jpg")
