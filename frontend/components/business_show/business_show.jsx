@@ -18,8 +18,11 @@ export default class BusinessShow extends React.Component {
     const business = this.props.business ;
     if (!business) {
       return (
-        <div>
-          fetching businesses
+        <div className="business-show-container">
+          <HeaderContainer />
+          <div className="business-show">
+            <h2>Fetching Businesses...</h2>
+          </div>
         </div>
       );
     } else {
