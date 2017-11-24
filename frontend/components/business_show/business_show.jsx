@@ -1,28 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderContainer from '../header/header_container';
+import BusinessDetails from './business_details';
 
 
-// export default class BusinessShow extends React.Component {
-  // constructor(props){
-  //   super(props);
-  //   console.log(this.props);
-  // }
-  // componentDidMount(){
-  //     this.props.fetchBusiness(this.props.match.params.businessId);
-  // }
-  const BusinessShow  = ({ business, businessId, fetchBusiness }) => {
-  const businesses = {
-    [businessId]: business
-  };
+export default class BusinessShow extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = this.props.business;
+  }
+
+  componentDidMount(){
+      this.props.fetchBusiness(this.props.match.params.businessId);
+  }
+
+  render () {
+    const business = this.props.business ;
+    if (!business) {
+      return (
+        <div>
+          fetching businesses
+        </div>
+      );
+    } else {
     return (
       <div className="business-show-container">
         <HeaderContainer />
         <div className="business-show">
-
+          <BusinessDetails business={business}/>
         </div>
       </div>
     );
-  };
+    }
+  }
+}
 
-  export default BusinessShow;
+
+
+  // const BusinessShow  = ({ business, businessId, fetchBusiness }) => {
+  //   const businesses = {
+  //     [businessId]: business
+  //   };
+
+
+  //
+  // export default BusinessShow;

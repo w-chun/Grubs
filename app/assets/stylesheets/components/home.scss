@@ -56,8 +56,9 @@
 
 .greeting {
   display: flex;
-  font-family: Anton;
+  font-family: helvetica;
   color: white;
+  font-size: 12px;
 }
 
 .current-user {
@@ -100,7 +101,7 @@
   width: 100vw;
   height: 600px;
   background-image: url("http://res.cloudinary.com/dih798zsl/image/upload/v1511460921/pexels-photo-106343_bt1fsy.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -108,13 +109,13 @@
 .footer {
   display: flex;
   border-top: 1px solid #ccc;
-  min-width: 1020px;
   background-color: #eee;
 }
 
 .footer-container {
   display: flex;
   margin: auto;
+  flex-wrap: wrap;
 }
 .footer-menu {
   display: block;

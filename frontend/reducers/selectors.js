@@ -3,6 +3,6 @@ export const selectBusiness = ({ businesses }, id) => {
   return business;
 };
 
-export const asArray = ({ businesses }) => (
-  Object.keys(businesses).map(key => businesses[key])
-);
+// export const asArray = ({ businesses }) => (
+//   Object.keys(businesses).map(key => businesses[key])
+// );

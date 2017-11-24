@@ -22,6 +22,10 @@ class SessionForm extends React.Component {
     this.loginDemo = this.loginDemo.bind(this);
   }
 
+  componentWillUnmount (){
+    debugger;
+    this.props.clearErrors();
+  }
 
   update(field) {
     return (e) => {
