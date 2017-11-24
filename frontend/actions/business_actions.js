@@ -14,8 +14,8 @@ const receiveBusiness = (business) => ({
 });
 
 
-export const fetchBusinesses = (filters) => dispatch => (
-  BusinessAPIUtil.fetchBusinesses(filters)
+export const fetchBusinesses = () => dispatch => (
+  BusinessAPIUtil.fetchBusinesses()
     .then((businesses) => dispatch(receiveBusinesses(businesses)))
 );
 

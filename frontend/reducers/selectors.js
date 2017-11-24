@@ -1,5 +1,6 @@
 export const selectBusiness = ({ businesses }, id) => {
-  return businesses[id] ;
+  const business = businesses[id];
+  return business;
 };
 
 export const asArray = ({ businesses }) => (
