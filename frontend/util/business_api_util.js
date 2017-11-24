@@ -2,7 +2,6 @@ export const fetchBusinesses = () => (
   $.ajax({
     method: "GET",
     url: '/api/businesses',
-    success: (res) => {debugger;},
     error: (err) => console.log(err)
   })
 );
