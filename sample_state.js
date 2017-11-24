@@ -7,8 +7,12 @@
         address: "22 Hawthorne St",
         city: "San Francisco",
         state: "CA",
-        zipcode: "94105",
+        zipcode: 94105,
+        phone: "(415) 685-4860"
+        latitude: 37.7855144
+        longitude: -122.398951
         url: "https://www.benusf.com/"
+        img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_100/v1511479405/benu_lvifbp.jpg"
 
       },
       15: {
@@ -17,7 +21,7 @@
         address: "584 Washington St",
         city: "San Francisco",
         state: "CA",
-        zipcode: "94111",
+        zipcode: 94111,
         url: "http://kusakabe-sf.com/"
       }
       ...
