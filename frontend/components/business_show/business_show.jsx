@@ -18,9 +18,9 @@ export default class BusinessShow extends React.Component {
     const business = this.props.business ;
     if (!business) {
       return (
-        <div className="business-show-container">
+        <div className="business-show-wrapper">
           <HeaderContainer />
-          <div className="business-show">
+          <div className="business-show-container">
             <h2>Fetching Businesses...</h2>
           </div>
         </div>
@@ -29,8 +29,10 @@ export default class BusinessShow extends React.Component {
     return (
       <div className="business-show-wrapper">
         <HeaderContainer />
-        <div className="business-show-container">
-          <BusinessDetails business={business}/>
+        <div className="top-shelf-grey">
+          <div className="business-show-container">
+            <BusinessDetails business={business}/>
+          </div>
         </div>
       </div>
     );
