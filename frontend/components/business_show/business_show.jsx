@@ -39,14 +39,3 @@ export default class BusinessShow extends React.Component {
     }
   }
 }
-
-
-
-  // const BusinessShow  = ({ business, businessId, fetchBusiness }) => {
-  //   const businesses = {
-  //     [businessId]: business
-  //   };
-
-
-  //
-  // export default BusinessShow;

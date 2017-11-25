@@ -20,4 +20,5 @@
 class Business < ApplicationRecord
   validates :name, :address, :city, :state, :zipcode, :url, :img_url, presence: true
 
+  has_many :reviews
 end
