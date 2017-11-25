@@ -11,13 +11,17 @@
 }
 
 .business-info {
-  width: 100%;
+  width: 116%;
   display: flex;
   justify-content: space-between;
 }
 
 .business-address {
-  width: 40%;
+  width: 50%;
   justify-content: flex-end;
   list-style: none;
+}
+
+.map  {
+  width: 33.33%;
 }

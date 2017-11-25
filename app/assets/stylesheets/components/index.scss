@@ -11,7 +11,6 @@
 .business-index {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 1000px;
   margin: auto;
 }
@@ -20,5 +19,14 @@
 .business-list {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 66.67%;
+}
+
+.business-title a{
+  text-decoration: none;
+  color: #0073bb;
+}
+
+.business-title a:hover{
+  text-decoration: underline;
 }
