@@ -7,7 +7,9 @@ const IndexItem = ({ business }) => {
       <div className="business-info">
         <div className="business-info-left">
           <div className="business-image"><img className="index-image" src={business.img_url} /></div>
-          <div className="business-title">{business.name}</div>
+          <div className="business-title">
+            <Link to={`/businesses/${business.id}`}>{business.name}</Link>
+          </div>
         </div>
         <div className="business-address">
           <li>{business.address}</li>

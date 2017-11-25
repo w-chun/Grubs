@@ -8,11 +8,9 @@ const BusinessDetails = ({ business }) => {
       <ul className="business-list">
         <img className="index-image" src={business.img_url} />
         <li>{business.name}</li>
-        <li>{business.address}</li>
-        <li>{business.city}</li>
-        <li>{business.state}</li>
-        <li>{business.zipcode}</li>
-        <li>{business.phone}</li>
+          <li>{business.address}</li>
+          <li>{business.city}, {business.state} {business.zipcode}</li>
+          <li>{business.phone}</li>
         <li>{business.url}</li>
       </ul>
     </div>

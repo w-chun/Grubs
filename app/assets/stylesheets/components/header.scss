@@ -9,5 +9,34 @@
   display: flex;
   width: 1000px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.header-nav-links {
+  display: flex;
+  width: 100%;
+  background-color: #bd1f1f;
+}
+
+.nav-links {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  padding-right: 5px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: #fff;
+  padding: 3px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.header-nav-links a:hover {
+  background-color: r
 }

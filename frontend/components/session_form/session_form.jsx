@@ -118,7 +118,7 @@ class SessionForm extends React.Component {
           <div className="login-form-container">
               <div className="login-form">
                 <h2 className="message">{message}</h2>
-                <div className="nav-login" onClick={this.handleErrors}>{navLogin}</div>
+                <div className="nav-login">{navLogin}</div>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <input type="text"
                       value={this.state.username}
@@ -133,7 +133,7 @@ class SessionForm extends React.Component {
                     <input type="submit" value={button} className="button"/>
                     {demoLogin}
                 </form>
-                <div className="nav-signup" onClick={this.handleErrors}>{navSignup}</div>
+                <div className="nav-signup">{navSignup}</div>
               </div>
             </div>
             <div className="session-img">

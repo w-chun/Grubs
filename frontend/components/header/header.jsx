@@ -37,12 +37,23 @@ export default class Header extends React.Component {
     }
 
     return (
-      <div className="header-container">
-        <div className="header-nav">
-          <div className="grubs-link">
-            <h1><Link to="/" className="title">Grubs</Link></h1>
+      <div className="header-container-wrapper">
+        <div className="header-container">
+          <div className="header-nav">
+            <div className="grubs-link">
+              <h1><Link to="/" className="title">Grubs</Link></h1>
+            </div>
+            {nav}
           </div>
-          {nav}
+        </div>
+        <div className="header-nav-links">
+          <div className="nav-links">
+            <Link to="/businesses">Restaurants</Link>
+            <a href="">Nightlife</a>
+            <a href="">Home Services</a>
+            <a href="">.</a>
+            <Link to="">Write a Review</Link>
+          </div>
         </div>
       </div>
     );
