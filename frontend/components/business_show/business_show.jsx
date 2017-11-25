@@ -27,7 +27,11 @@ export default class BusinessShow extends React.Component {
       );
     } else {
     return (
-      <div className="business-show-container">
+      <div className="business-show-wrapper">
+        <HeaderContainer />
+        <div className="business-show-container">
+          <BusinessDetails business={business}/>
+        </div>
       </div>
     );
     }

@@ -1,0 +1,15 @@
+.business-show-container {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+}
+
+.business-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-details-address{
+  justify-content: flex-end;
+  list-style: none;
+}
