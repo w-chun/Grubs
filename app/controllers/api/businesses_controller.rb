@@ -6,12 +6,12 @@ class Api::BusinessesController < ApplicationController
 
   def index
     @businesses = Business.all
-    render json: @businesses
+    render :index
   end
 
   def show
     @business = Business.find_by(id: params[:id])
-    render json: @business
+    render :show
   end
 
   private

@@ -12,9 +12,14 @@ export default class BusinessShow extends React.Component {
   }
 
   componentDidMount(){
-      this.props.fetchBusiness(this.props.match.params.businessId);
+    this.props.fetchBusiness(this.props.match.params.businessId);
   }
 
+  componentWillReceiveProps(newProps){
+    if (this.props.match.params.businessId !== newProps.match.params.businessId) {
+      this.props.fetchBusiness(newProps.match.params.businessId);
+    }
+  }
 
   render () {
     const business = this.props.business ;

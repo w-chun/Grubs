@@ -10,6 +10,8 @@ User.destroy_all
 
 demo = User.create(username: "demo", email: "demo_user@gmail.com", password: "password",
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png")
+user1 = User.create(username: "wilson", email: "wilson@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png" )
 
 Business.destroy_all
 
@@ -43,3 +45,7 @@ business9 = Business.create(name: "Ben Tre Vietnamese Homestyle Cuisine", addres
 business10 = Business.create(name: "Hog Island Oyster Co", address: "1 Ferry Bldg", city: "San Francisco", state: "CA",
   zipcode: 94111, phone: "(415) 391-7117", url: "hogislandoysters.com", latitude: 37.795396, longitude: -122.393752,
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_80,w_100/v1511591557/hogisland_wg9wxr.jpg")
+
+Review.destroy_all
+
+review1= Review.create(body: "One of the best restaurants in SF!", rating: 5, author_id: 2, business_id: 1)
