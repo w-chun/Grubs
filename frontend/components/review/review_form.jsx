@@ -11,7 +11,6 @@ export default class ReviewForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
-
   }
 
   componentDidMount() {
@@ -56,18 +55,26 @@ export default class ReviewForm extends React.Component {
   }
 
   render() {
+    let title;
+    let button;
+    if (this.props.formType === 'edit') {
+      title = 'Update Review';
+      button = <button onClick={this.handleDelete()}>Delete Review</button>;
+    } else {
+      title = "Write a Review";
+    }
     return (
       <div className="review-form-container">
         <HeaderContainer />
         <div>
-          <label>Review</label>
+          <label>{title}</label>
         </div>
         <div className="review-form">
           <div>
             <textarea onChange={this.updateBody()} value={this.state.body}></textarea>
           </div>
-          <button>Post Review</button>
-          <Link to={`/businesses/${this.props.business.id}`}>Cancel</Link>
+            <button onClick={this.handleSubmit}>Post Review</button>
+            <Link to={`/businesses/${this.props.business.id}`}>Cancel</Link>
         </div>
       </div>
     );

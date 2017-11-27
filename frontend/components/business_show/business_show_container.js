@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     business,
     reviews,
-    currentUser: state.entities.currentUser
+    currentUser: state.session.currentUser
   };
 };
 

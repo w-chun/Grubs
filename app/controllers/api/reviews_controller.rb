@@ -12,7 +12,7 @@ class Api::ReviewsController < ApplicationController
 
   def index
     if params[:business_id]
-      @reviews = Review.where(business_id: params[:business_id])
+      @reviews = Business.find_by(id: params[:business_id]).reviews
       render :index
     end
   end

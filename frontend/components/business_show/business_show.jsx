@@ -9,16 +9,37 @@ export default class BusinessShow extends React.Component {
   constructor(props){
     super(props);
     this.state = this.props.business;
+    this.reviewLink = this.reviewLink.bind(this);
   }
 
   componentDidMount(){
     this.props.fetchBusiness(this.props.match.params.businessId);
+    this.props.fetchReviews(this.props.match.params.businessId);
   }
 
   componentWillReceiveProps(newProps){
     if (this.props.match.params.businessId !== newProps.match.params.businessId) {
       this.props.fetchBusiness(newProps.match.params.businessId);
+      this.props.fetchReviews(this.props.match.params.businessId);
     }
+  }
+
+  reviewLink(){
+    let title = "Write a Review";
+    let path = 'reviews/new';
+    let user;
+    if (this.props.currentUser) {
+      user = this.props.currentUser.id;
+    }
+    this.props.reviews.map(review => {
+      if (review.author_id === user) {
+        title = "Edit Review";
+        path = `reviews/${review.id}/edit`;
+      }
+    });
+    return (
+      <Link to={`/businesses/${this.props.business.id}/${path}`}>{title}</Link>
+    );
   }
 
   render () {
@@ -41,7 +62,7 @@ export default class BusinessShow extends React.Component {
             <BusinessDetails business={business}/>
           </div>
           <div className="review-link">
-            <Link to={`/businesses/${business.id}/reviews/new`}>New Review</Link>
+            {this.reviewLink()}
           </div>
         </div>
       </div>
