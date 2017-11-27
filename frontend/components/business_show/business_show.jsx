@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderContainer from '../header/header_container';
 import BusinessDetails from './business_details';
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 
 export default class BusinessShow extends React.Component {
@@ -32,6 +33,9 @@ export default class BusinessShow extends React.Component {
         <div className="top-shelf-grey">
           <div className="business-show-container">
             <BusinessDetails business={business}/>
+          </div>
+          <div className="review-link">
+            <Link to={`/businesses/${this.props.business.id}/reviews/new`}>Write a Review</Link>
           </div>
         </div>
       </div>

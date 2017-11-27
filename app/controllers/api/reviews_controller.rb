@@ -1,8 +1,8 @@
 class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
-    @review.business_id = params[business_id]
-    @review.user_id = current_user.id
+    @review.author_id = current_user.id
+    @review.business_id = params[:business_id]
     if @review.save
       render :show
     else
@@ -11,7 +11,10 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.all
+    if params[:business_id]
+        @reviews = Review.where(business_id: params[:business_id])
+        render :index
+    end
   end
 
   def show
@@ -24,7 +27,7 @@ class Api::ReviewsController < ApplicationController
     if @review.update_attributes(review_params)
       render :show
     else
-      render json: @reviews.errors.full_messages, status: 422
+      render json: @review.errors.full_messages, status: 422
     end
   end
 

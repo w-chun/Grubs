@@ -57,7 +57,6 @@ export default class ReviewForm extends React.Component {
   render() {
     return (
       <div className="review-form-container">
-        <HeaderContainer />
         <div>
           <label>Review</label>
         </div>
@@ -65,6 +64,7 @@ export default class ReviewForm extends React.Component {
           <div>
             <textarea onChange={this.updateBody()} value={this.state.body}></textarea>
           </div>
+          <button onClick={this.handleSubmit()}>Post Review</button>
         </div>
       </div>
     );
