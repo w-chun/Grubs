@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HeaderContainer from '../header/header_container';
 
 export default class ReviewForm extends React.Component {
   constructor(props) {
@@ -57,6 +58,7 @@ export default class ReviewForm extends React.Component {
   render() {
     return (
       <div className="review-form-container">
+        <HeaderContainer />
         <div>
           <label>Review</label>
         </div>
@@ -64,7 +66,8 @@ export default class ReviewForm extends React.Component {
           <div>
             <textarea onChange={this.updateBody()} value={this.state.body}></textarea>
           </div>
-          <button onClick={this.handleSubmit()}>Post Review</button>
+          <button>Post Review</button>
+          <Link to={`/businesses/${this.props.business.id}`}>Cancel</Link>
         </div>
       </div>
     );

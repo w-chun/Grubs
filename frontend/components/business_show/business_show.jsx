@@ -15,6 +15,7 @@ export default class BusinessShow extends React.Component {
       this.props.fetchBusiness(this.props.match.params.businessId);
   }
 
+
   render () {
     const business = this.props.business ;
     if (!business) {
@@ -35,7 +36,7 @@ export default class BusinessShow extends React.Component {
             <BusinessDetails business={business}/>
           </div>
           <div className="review-link">
-            <Link to={`/businesses/${this.props.business.id}/reviews/new`}>Write a Review</Link>
+            <Link to={`/businesses/${business.id}/reviews/new`}>New Review</Link>
           </div>
         </div>
       </div>

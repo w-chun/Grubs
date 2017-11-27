@@ -12,8 +12,8 @@ class Api::ReviewsController < ApplicationController
 
   def index
     if params[:business_id]
-        @reviews = Review.where(business_id: params[:business_id])
-        render :index
+      @reviews = Review.where(business_id: params[:business_id])
+      render :index
     end
   end
 
@@ -23,7 +23,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find_by(id: params[:id])
+    @review = current_user.reviews.find_by(id: params[:id])
     if @review.update_attributes(review_params)
       render :show
     else

@@ -34,12 +34,12 @@ export const createReview = (businessId, review) => dispatch => (
     .then((newReview) => dispatch(receiveReview(newReview)))
 );
 
-export const updateReview = (businessId , review) => dispatch => (
+export const updateReview = (businessId, review) => dispatch => (
   ReviewAPIUtil.updateReview(businessId, review)
     .then((updatedReview) => dispatch(receiveReview(updatedReview)))
 );
 
 export const deleteReview = (reviewId) => dispatch => (
   ReviewAPIUtil.deleteReview(reviewId)
-    .then((review) => dispatch(removeReview(review.id)))
+    .then(() => dispatch(removeReview(reviewId)))
 );
