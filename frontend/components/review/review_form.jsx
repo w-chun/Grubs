@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderContainer from '../header/header_container';
+import IndexItem from '../businesses/business_index_item';
 
 export default class ReviewForm extends React.Component {
   constructor(props) {
@@ -72,39 +73,53 @@ export default class ReviewForm extends React.Component {
     let cancel;
     if (this.props.formType === 'edit') {
       title = 'Update Review';
-      button = <button onClick={this.handleDelete}>
+      button = <button onClick={this.handleDelete} className="post-review-button">
         <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
           Delete Review
         </Link>
         </button>;
-      cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>Cancel</Link>;
+      cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`} className="cancel-button">Cancel</Link>;
     } else {
       title = "Write a Review";
-      cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>Cancel</Link>;
+      cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`} className="cancel-button">Cancel</Link>;
     }
     return (
-      <div className="review-form-container">
+      <div className="review-form-wrapper">
         <HeaderContainer />
-        <div>
-          <label>{title}</label>
-        </div>
-        <div className="review-form">
-          <div>
-            <div>
-              <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="1" /><label>1</label>
-              <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="2" /><label>2</label>
-              <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="3" /><label>3</label>
-              <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="4" /><label>4</label>
-              <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="5" /><label>5</label>
-            </div>
-            <textarea onChange={this.updateBody()} value={this.state.body}></textarea>
+        <div className="review-form-container">
+          <div className="review-title">
+            <label>{title}</label>
           </div>
-            <button onClick={this.handleSubmit}>
-              <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
-                Post Review</Link>
+          <div className="review-form-wrapper">
+            <div className="your-review"><label>Your Review</label></div>
+            <div className="review-form">
+              <div className="rating">
+                <div className="radio-buttons">
+                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="1" /><label>1</label>
+                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="2" /><label>2</label>
+                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="3" /><label>3</label>
+                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="4" /><label>4</label>
+                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="5" /><label>5</label>
+                </div>
+                <div className="rating-text"><label>Select Your Rating</label></div>
+              </div>
+                <div className="text-body">
+                  <textarea onChange={this.updateBody()} value={this.state.body}
+                    placeholder="Your review helps others learn about great local businesses.
+                    Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.">
+                  </textarea>
+                </div>
+            </div>
+            <div className="button-container">
+              <button onClick={this.handleSubmit} className="post-review-button">
+                <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
+                  Post Review
+                </Link>
               </button>
-            {button}
-            {cancel}
+              <div>{button}</div>
+              <div className="cancel-button-wrapper">{cancel}</div>
+            </div>
+          </div>
         </div>
       </div>
     );
