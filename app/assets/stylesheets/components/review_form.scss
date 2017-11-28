@@ -54,7 +54,8 @@
 }
 
 .rating-text {
-  margin-left: 10px;
+  margin-top: 5px;
+  margin-left: 15px;
 }
 
 .rating-text label {
@@ -110,4 +111,65 @@
 
 .cancel-button:hover {
   text-decoration: underline;
+}
+
+.star-rating {
+  font-size: 0;
+  white-space: nowrap;
+  display: inline-block;
+  width: 125px;
+  height: 25px;
+  overflow: hidden;
+  position: relative;
+  background: url('http://res.cloudinary.com/dih798zsl/image/upload/v1511909707/star_lgtavt.svg');
+  background-size: contain;
+}
+.star-rating i {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  z-index: 1;
+  background: url('http://res.cloudinary.com/dih798zsl/image/upload/v1511909916/star_hover_suakix.svg');
+  background-size: contain;
+}
+.star-rating input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: relative;
+}
+.star-rating input:hover + i,
+.star-rating input:checked + i {
+  opacity: 1;
+}
+.star-rating i ~ i {
+  width: 40%;
+}
+.star-rating i ~ i ~ i {
+  width: 60%;
+}
+.star-rating i ~ i ~ i ~ i {
+  width: 80%;
+}
+.star-rating i ~ i ~ i ~ i ~ i {
+  width: 100%;
+}
+
+::after,
+::before {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
 }

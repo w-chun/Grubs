@@ -99,12 +99,14 @@ export default class ReviewForm extends React.Component {
             <div className="your-review"><label>Your Review</label></div>
             <div className="review-form">
               <div className="rating">
-                <div className="radio-buttons">
-                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="1" /><label>1</label>
-                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="2" /><label>2</label>
-                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="3" /><label>3</label>
-                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="4" /><label>4</label>
-                  <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="5" /><label>5</label>
+                <div>
+                  <span className="star-rating">
+                    <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="1" /><i></i>
+                    <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="2" /><i></i>
+                    <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="3" /><i></i>
+                    <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="4" /><i></i>
+                    <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="5" /><i></i>
+                  </span>
                 </div>
                 <div className="rating-text"><label>Select Your Rating.</label></div>
               </div>
