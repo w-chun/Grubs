@@ -20,6 +20,11 @@ export default class ReviewForm extends React.Component {
     this.props.fetchBusiness(this.props.match.params.businessId);
   }
 
+  componentWillUnmount(){
+    this.props.fetchReview(this.props.match.params.reviewId);
+    this.props.fetchBusiness(this.props.match.params.businessId);
+  }
+
   componentWillReceiveProps(newProps) {
     if (newProps.review) {
       const review = newProps.review;
@@ -47,7 +52,9 @@ export default class ReviewForm extends React.Component {
     let business = this.props.business;
     let review = this.state;
     if (this.props.formType === 'edit') {
-      review = Object.assign({}, review, { body: this.state.body, rating: this.state.rating });
+      review = Object.assign({}, review,
+        { body: this.state.body, rating: this.state.rating, id: this.props.match.params.reviewId}
+        );
       this.props.processForm(review, business.id, this.props.formType);
     } else {
       this.props.processForm(review, business.id, this.props.formType);
@@ -62,11 +69,18 @@ export default class ReviewForm extends React.Component {
   render() {
     let title;
     let button;
+    let cancel;
     if (this.props.formType === 'edit') {
       title = 'Update Review';
-      button = <button onClick={this.handleDelete}>Delete Review</button>;
+      button = <button onClick={this.handleDelete}>
+        <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
+          Delete Review
+        </Link>
+        </button>;
+      cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>Cancel</Link>;
     } else {
       title = "Write a Review";
+      cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>Cancel</Link>;
     }
     return (
       <div className="review-form-container">
@@ -85,9 +99,12 @@ export default class ReviewForm extends React.Component {
             </div>
             <textarea onChange={this.updateBody()} value={this.state.body}></textarea>
           </div>
-            <button onClick={this.handleSubmit}>Post Review</button>
+            <button onClick={this.handleSubmit}>
+              <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
+                Post Review</Link>
+              </button>
             {button}
-            <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>Cancel</Link>
+            {cancel}
         </div>
       </div>
     );

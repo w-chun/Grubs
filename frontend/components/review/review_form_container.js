@@ -17,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     business: selectBusiness(state.entities, ownProps.match.params.businessId),
     review,
-    formType
+    formType,
+    currentUser: state.session.currentUser
   };
 };
 
