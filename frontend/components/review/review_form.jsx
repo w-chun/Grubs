@@ -36,6 +36,11 @@ export default class ReviewForm extends React.Component {
     }
   }
 
+  componentDidUpdate() {
+    const placeholder="Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.";
+    this.refs.Textarea.setAttribute("placeholder", placeholder);
+  }
+
   updateBody() {
     return (e) => {
       this.setState({ body: e.currentTarget.value });
@@ -101,10 +106,10 @@ export default class ReviewForm extends React.Component {
                   <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="4" /><label>4</label>
                   <input type="radio" name="rating" onClick={this.updateRating().bind(this)} value="5" /><label>5</label>
                 </div>
-                <div className="rating-text"><label>Select Your Rating</label></div>
+                <div className="rating-text"><label>Select Your Rating.</label></div>
               </div>
                 <div className="text-body">
-                  <textarea onChange={this.updateBody()} value={this.state.body}
+                  <textarea ref="Textarea" onChange={this.updateBody()} value={this.state.body}
                     placeholder="Your review helps others learn about great local businesses.
                     Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.">
                   </textarea>

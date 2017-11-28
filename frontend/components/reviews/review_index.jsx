@@ -2,17 +2,27 @@ import React from 'react';
 import ReviewIndexItem from './review_index_item';
 
 export default class ReviewIndex extends React.Component {
-  componentWillMount() {
-    this.props.fetchReviews(this.props.business.id);
+  componentDidMount() {
+    this.props.fetchBusiness(this.props.business);
+    this.props.fetchReviews(this.props.match.params.businessId);
   }
 
   render() {
+    const business = this.props.businesses[this.props.business];
     const reviews = this.props.businessReviews.map((review, i) => {
       return <ReviewIndexItem key={`review-${i}`} review={review} />;
     });
-    const business = this.props.business;
     return (
-      {reviews}
+      <div className="review-index-item-wrapper">
+        <h2 className="recommended-reviews">Recommended Reviews
+        <div className="business-review-name">for {business.name}</div>
+        </h2>
+        <div className="reviews-list">
+          <ul>
+            {reviews}
+          </ul>
+        </div>
+      </div>
     );
   }
 }

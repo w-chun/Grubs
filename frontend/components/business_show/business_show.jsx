@@ -66,6 +66,7 @@ export default class BusinessShow extends React.Component {
               </div>
             </div>
           </div>
+          <ReviewIndexContainer />
         </div>
       </div>
     );
