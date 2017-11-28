@@ -19,27 +19,27 @@ const removeReview = review => ({
   review
 });
 
-export const fetchReviews = (businessId) => dispatch => (
-  ReviewAPIUtil.fetchReviews(businessId)
-    .then((reviews) => dispatch(receiveReviews(reviews)))
-);
+export const fetchReviews = (businessId) => dispatch => {
+  return ReviewAPIUtil.fetchReviews(businessId)
+    .then((reviews) => dispatch(receiveReviews(reviews)));
+};
 
-export const fetchReview = (reviewId) => dispatch => (
-  ReviewAPIUtil.fetchReview(reviewId)
-    .then((review) => dispatch(receiveReview(review)))
-);
+export const fetchReview = (reviewId) => dispatch => {
+  return ReviewAPIUtil.fetchReview(reviewId)
+    .then((review) => dispatch(receiveReview(review)));
+};
 
-export const createReview = (businessId, review) => dispatch => (
-  ReviewAPIUtil.createReview(businessId, review)
-    .then((newReview) => dispatch(receiveReview(newReview)))
-);
+export const createReview = (businessId, review) => dispatch => {
+  return ReviewAPIUtil.createReview(businessId, review)
+    .then((newReview) => dispatch(receiveReview(newReview)));
+};
 
-export const updateReview = (businessId, review) => dispatch => (
-  ReviewAPIUtil.updateReview(businessId, review)
-    .then((updatedReview) => dispatch(receiveReview(updatedReview)))
-);
+export const updateReview = (businessId, review) => dispatch => {
+  return ReviewAPIUtil.updateReview(businessId, review)
+    .then((updatedReview) => dispatch(receiveReview(updatedReview)));
+};
 
-export const deleteReview = (reviewId) => dispatch => (
-  ReviewAPIUtil.deleteReview(reviewId)
-    .then(() => dispatch(removeReview(reviewId)))
-);
+export const deleteReview = (reviewId) => dispatch => {
+  return ReviewAPIUtil.deleteReview(reviewId)
+    .then(() => dispatch(removeReview(reviewId)));
+};

@@ -8,11 +8,11 @@ import { fetchReviews, fetchReview, createReview, updateReview, deleteReview } f
 const mapStateToProps = (state, ownProps) => {
   let formType;
   let review;
-  if (ownProps.match.params.businessId) {
-    formType = 'new';
-  } else {
+  if (ownProps.match.path === "/businesses/:businessId/reviews/:reviewId/edit") {
     formType = 'edit';
     review = selectReview(state.entities, ownProps.match.params.reviewId);
+  } else {
+    formType = 'new';
   }
   return {
     business: selectBusiness(state.entities, ownProps.match.params.businessId),
