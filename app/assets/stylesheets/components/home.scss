@@ -127,7 +127,7 @@
 .home-nav-links a {
   color: #fff;
   padding: 3px 15px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 21px;
   text-decoration: none;
@@ -135,4 +135,24 @@
 
 .home-nav-links a:hover {
   text-decoration: underline;
+}
+
+.search-bar {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  justify-content: center;
+}
+
+.search-bar span {
+  background-color: #fff;
+  height: 25px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 50%;
+  height: 25px;
+  font-size: 18px;
+  border-radius: 4px;
 }

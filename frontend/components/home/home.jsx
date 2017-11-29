@@ -12,11 +12,13 @@ export default class Home extends React.Component {
             <div className="nav-center"><GreetingContainer /></div>
           </header>
           <div className="title-link"><h1><Link to="/" className="title">Grubs</Link></h1></div>
+          <div className="search-bar">
+            <input type="text"></input>
+
+          </div>
           <div className="home-nav-links-container">
             <div className="home-nav-links">
               <Link to="/businesses">Restaurants</Link>
-              <a href="">Nightlife</a>
-              <a href="">Home Services</a>
             </div>
           </div>
         </div>

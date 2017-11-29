@@ -16,7 +16,7 @@ const mapOptions = {
     lat: 37.773972,
     lng: -122.43129
   },
-  zoom: 13
+  zoom: 12
 };
 
 class BusinessMap extends React.Component {
@@ -29,7 +29,16 @@ class BusinessMap extends React.Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.businesses[0] !== nextProps.businesses[0]) {
+      nextProps.businesses.map(business => (
+        this.MarkerManager.createMarkerFromBusiness(business)
+      ));
+    }
+  }
+
   render() {
+    console.log(this.props);
     return (
       <div id="map" ref="map">Map</div>
     );

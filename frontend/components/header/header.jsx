@@ -49,10 +49,8 @@ export default class Header extends React.Component {
         <div className="header-nav-links">
           <div className="nav-links">
             <Link to="/businesses">Restaurants</Link>
-            <a href="">Nightlife</a>
-            <a href="">Home Services</a>
-            <a href="">.</a>
-            <Link to="">Write a Review</Link>
+            <a href="https://www.linkedin.com/in/wilson-chun-58a86891/">About Me</a>
+            <Link to=''>Write a Review</Link>
           </div>
         </div>
       </div>
