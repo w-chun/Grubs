@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderContainer from '../header/header_container';
 import IndexItem from './business_index_item';
+import BusinessMapContainer from '../business_map/business_map_container';
 
 export default class BusinessIndex extends React.Component {
 
@@ -30,11 +31,8 @@ export default class BusinessIndex extends React.Component {
             <div className="filters">Filters</div>
             <div className="business-index">
               <div className="business-list">{businessesList}</div>
-              <div className="map">
-                Map
-              </div>
+              <BusinessMapContainer />
             </div>
-
           </div>
         );
       }
