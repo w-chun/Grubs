@@ -111,7 +111,7 @@ export default class ReviewForm extends React.Component {
                 <div className="rating-text"><label>Select Your Rating.</label></div>
               </div>
                 <div className="text-body">
-                  <textarea ref="Textarea" onChange={this.updateBody()} value={this.state.body}
+                  <textarea ref="Textarea" onChange={this.updateBody()} value={this.state.body} required="true"
                     placeholder="Your review helps others learn about great local businesses.
                     Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.">
                   </textarea>

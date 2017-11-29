@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import HeaderContainer from '../header/header_container';
 import BusinessDetails from './business_details';
 import ReviewIndexContainer from '../reviews/review_index_container';
+import BenchMap from '../business_map/business_map';
 
 
 export default class BusinessShow extends React.Component {

@@ -96,7 +96,8 @@ class SessionForm extends React.Component {
           <input type="text"
           value={this.state.email}
           onChange={this.update("email")}
-          placeholder="Email" />
+          placeholder="Email"
+          required="true" />
       );
       navLogin = (<p>Already on Grubs? <Link className="nav-login-link" to='/login'>Log In</Link></p>);
       demoLogin = <button className="demo-login" onClick={this.loginDemo()}>Demo Login</button>;
@@ -123,12 +124,14 @@ class SessionForm extends React.Component {
                     <input type="text"
                       value={this.state.username}
                       onChange={this.update("username")}
-                      placeholder="Username" />
+                      placeholder="Username"
+                      required="true" />
                     {emailForm}
                     <input type="password"
                       value={this.state.password}
                       onChange={this.update("password")}
-                      placeholder="Password" />
+                      placeholder="Password"
+                      required="true" />
 
                     <input type="submit" value={button} className="button"/>
                     {demoLogin}

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ReviewIndexItem = ({ review }) => {
-  console.log({review});
   return (
     <div className="review-index-wrapper">
       <div className="review-index-container">

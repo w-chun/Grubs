@@ -1,4 +1,5 @@
 import React from 'react';
+import Favicon from 'react-favicon';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import HomeContainer from './home/home_container';
@@ -11,6 +12,7 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
+    <Favicon url="http://res.cloudinary.com/dih798zsl/image/upload/v1511918737/26240912-illustration-of-funny-chef-with-toque-presenting-his-stars-Stock-Illustration_ruu4ja.jpg"/>
     <Switch>
       <Route exact path="/" component={HomeContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />
