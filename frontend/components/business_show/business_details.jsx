@@ -6,7 +6,10 @@ const BusinessDetails = ({ business }) => {
   return (
     <div className="business-details">
       <h1>{business.name}</h1>
-      <div className="business-details-address">
+      <div className="business-details-location">
+        <div className="business-map">
+          <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${business.latitude},${business.longitude}&zoom=15&size=300x200&markers=color:red%7C%7C${business.latitude},${business.longitude}&key=AIzaSyAI3nAmR1VrXe3fH4N5iu6zNl_g56fcZAI`}/>
+        </div>
           <li>{business.address}</li>
           <li>{business.city}, {business.state} {business.zipcode}</li>
           <li>{business.phone}</li>
