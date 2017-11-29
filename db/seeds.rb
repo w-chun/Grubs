@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
 
 demo = User.create(username: "demo", email: "demo_user@gmail.com", password: "password",
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png")
@@ -27,6 +28,7 @@ user8 = User.create(username: "Lonzo", email: "zo@gmail.com", password: "passwor
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511931330/i_t8w1ld.png" )
 
 
+Business.destroy_all
 
 business1 = Business.create(name: "Benu", address: "22 Hawthone St", city: "San Francisco", state: "CA",
   zipcode: 94105, phone: "(415) 685-4860", url: "benusf.com", latitude: 37.7855144, longitude: -122.398951,
@@ -59,6 +61,7 @@ business10 = Business.create(name: "Hog Island Oyster Co", address: "1 Ferry Bld
   zipcode: 94111, phone: "(415) 391-7117", url: "hogislandoysters.com", latitude: 37.795396, longitude: -122.393752,
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_80,w_100/v1511591557/hogisland_wg9wxr.jpg")
 
+Review.destroy_all
 
 author_ids = (User.first.id..User.last.id).to_a
 business_ids = (Business.first.id..Business.last.id).to_a

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { withRouter } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 
 import MarkerManager from "../../util/marker_manager";
 
@@ -21,7 +21,6 @@ const mapOptions = {
 
 class BusinessMap extends React.Component {
   componentDidMount() {
-    this.props.fetchBusinesses();
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
@@ -37,4 +36,4 @@ class BusinessMap extends React.Component {
   }
 }
 
-export default withRouter(BusinessMap);
+export default BusinessMap;

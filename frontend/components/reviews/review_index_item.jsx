@@ -23,7 +23,10 @@ const ReviewIndexItem = ({ review }) => {
   return (
     <div className="review-index-wrapper">
       <div className="review-index-container">
-        <div className="user-profile">Review by: User {review.author_id}</div>
+        <div className="user-profile">
+          <div className="profile-pic"><img src={review.user.img_url}></img></div>
+          <div className="review-user">{review.user.username}</div>
+          </div>
         <div className="user-review">
           <div className="review-rating">{rating}</div>
           <div className="review-body">{review.body}</div>

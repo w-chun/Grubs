@@ -8,10 +8,13 @@ const mapStateToProps = (state, ownProps) => {
   if (Object.keys(state.entities.businesses).length > 0) {
     businesses = asArray(state.entities);
   }
+  return {
+    businesses
+  };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchBusinesses: () => dispatch(fetchBusinesses())
+
 });
 
 export default connect(
