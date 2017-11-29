@@ -26,7 +26,6 @@
   display: flex;
   width: 66.67%;
   flex-direction: column;
-  border-bottom: 1px solid #ddd;
 }
 
 .reviews-list ul {
@@ -34,6 +33,10 @@
 }
 .review-index-wrapper {
   display: flex;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100px;
 }
 
 .review-index-container {
@@ -41,8 +44,14 @@
   justify-content: space-between;
 }
 
+.user-profile {
+  display: flex;
+  width: 200px;
+}
+
 .user-review {
   display: flex;
+  width: 400px;
   padding-left: 30px;
   flex-direction: column;
 }
@@ -54,4 +63,30 @@
 
 .review-body {
   margin-top: 10px;
+}
+
+.red-star-1 {
+  background: url("http://res.cloudinary.com/dih798zsl/image/upload/v1511935148/untitled_fxcn0o.svg");
+  width: 20px;
+  height: 20px;
+}
+.red-star-2 {
+  background: url("http://res.cloudinary.com/dih798zsl/image/upload/v1511935148/untitled_fxcn0o.svg");
+  width: 40px;
+  height: 20px;
+}
+.red-star-3 {
+  background: url("http://res.cloudinary.com/dih798zsl/image/upload/v1511935148/untitled_fxcn0o.svg");
+  width: 60px;
+  height: 20px;
+}
+.red-star-4 {
+  background: url("http://res.cloudinary.com/dih798zsl/image/upload/v1511935148/untitled_fxcn0o.svg");
+  width: 80px;
+  height: 20px;
+}
+.red-star-5 {
+  background: url("http://res.cloudinary.com/dih798zsl/image/upload/v1511935148/untitled_fxcn0o.svg");
+  width: 100px;
+  height: 20px;
 }

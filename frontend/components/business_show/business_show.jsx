@@ -34,7 +34,7 @@ export default class BusinessShow extends React.Component {
     }
     this.props.reviews.map(review => {
       if (review.author_id === user) {
-        title = "Edit Review";
+        title = "Update Review";
         path = `reviews/${review.id}/edit`;
       }
     });

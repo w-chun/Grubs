@@ -6,14 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
 
 demo = User.create(username: "demo", email: "demo_user@gmail.com", password: "password",
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png")
-user1 = User.create(username: "wilson", email: "wilson@gmail.com", password: "password",
-  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png" )
+user1 = User.create(username: "Wilson", email: "wilson@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511930352/Wilson_Chun_1_rrpcpz.jpg" )
+user2 = User.create(username: "Kobe", email: "kobe@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511930527/i_trvnfq.png" )
+user3 = User.create(username: "Nick", email: "nick@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511930649/bng-l-warriors-0923-112_xp6ct2.jpg" )
+user4 = User.create(username: "DLO", email: "dlo@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511930748/i_1_tfo4dc.png" )
+user5 = User.create(username: "Steph", email: "steph@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511930850/338365.vresize.350.425.medium.83_q5ktup.png" )
+user6 = User.create(username: "Klay", email: "klay@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511931176/i_1_lvquap.png" )
+user7 = User.create(username: "KD", email: "kd@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511931273/i_2_wjj1go.png" )
+user8 = User.create(username: "Lonzo", email: "zo@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511931330/i_t8w1ld.png" )
 
-Business.destroy_all
+
 
 business1 = Business.create(name: "Benu", address: "22 Hawthone St", city: "San Francisco", state: "CA",
   zipcode: 94105, phone: "(415) 685-4860", url: "benusf.com", latitude: 37.7855144, longitude: -122.398951,
@@ -46,6 +59,33 @@ business10 = Business.create(name: "Hog Island Oyster Co", address: "1 Ferry Bld
   zipcode: 94111, phone: "(415) 391-7117", url: "hogislandoysters.com", latitude: 37.795396, longitude: -122.393752,
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_80,w_100/v1511591557/hogisland_wg9wxr.jpg")
 
-Review.destroy_all
 
-review1= Review.create(body: "One of the best restaurants in SF!", rating: 5, author_id: 2, business_id: 1)
+author_ids = (User.first.id..User.last.id).to_a
+business_ids = (Business.first.id..Business.last.id).to_a
+
+100.times do
+  random = rand(1..10)
+  case random
+  when 1 || 5
+    rating = 1
+    body = "Super long wait for a table. Service was horrible and the food was cold."
+  when 2 || 6
+    rating = 2
+    body = "This place is really dirty, but the food didn't taste that bad."
+  when 3 || 7
+    rating = 3
+    body = "Food was decent. Service was alright. Could be better."
+  when 4 || 8
+    rating = 4
+    body = "Everything was solid. Would come back here again."
+  else
+    rating = 5
+    body = "This place was amazing! Definitely enjoyed everything from the food to the service! Must try!!"
+  end
+  Review.create(
+    author_id: author_ids.sample,
+    business_id: business_ids.sample,
+    rating: rating,
+    body: body,
+  )
+end
