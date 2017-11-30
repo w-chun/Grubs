@@ -11,12 +11,16 @@
 }
 
 .business-info {
-  width: 116%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #eee
+}
+
+.business-title {
+  max-width: 200px;
 }
 
 .business-address {
@@ -27,4 +31,8 @@
 
 .map  {
   width: 33.33%;
+}
+
+.map-container {
+  padding-top: 30px;
 }

@@ -10,7 +10,7 @@ export default class BusinessIndex extends React.Component {
       this.props.fetchBusinesses();
     }
   }
-  
+
   render() {
     const businesses = this.props.businesses;
     const businessesList = Object.keys(businesses).map(business => {
@@ -32,6 +32,7 @@ export default class BusinessIndex extends React.Component {
             <div className="filters">Filters</div>
             <div className="business-index">
               <div className="business-list">{businessesList}</div>
+              <BusinessMapContainer />
             </div>
           </div>
         );
