@@ -40,3 +40,32 @@
 .header-nav-links a:hover {
   background-color: #981616
 }
+
+
+.header-search-bar {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.header-search-bar input {
+  padding: 10px;
+  width: 300px !important;
+  height: 25px;
+  font-size: 18px;
+  border-radius: 4px 0px 0px 4px;
+  border: 0;
+}
+
+.header-search-bar button{
+  background-color: #bd1f1f;
+  padding: 14px 20px 13px;
+  border-radius: 0 4px 4px 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.header-search-bar button:hover {
+  cursor: pointer;
+  background-color: #981616;
+}

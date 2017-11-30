@@ -19,4 +19,10 @@ class Api::BusinessesController < ApplicationController
   def business_params
     params.require(:business).permit(:name, :address, :city, :state, :zipcode)
   end
+
+  def search_params
+    params.require(:search).permit(:query, :business_id)
+  end
 end
+
+# @businesses = Business.search_results(search_params[:query])

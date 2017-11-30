@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Search from '../search/search';
 
 
 export default class Header extends React.Component {
@@ -42,6 +43,9 @@ export default class Header extends React.Component {
           <div className="header-nav">
             <div className="grubs-link">
               <h1><Link to="/" className="title">Grubs</Link></h1>
+            </div>
+            <div className="header-search-bar">
+              <Search />
             </div>
             {nav}
           </div>

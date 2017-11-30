@@ -137,22 +137,8 @@
   text-decoration: underline;
 }
 
-.search-bar {
+.home-search-bar {
   display: flex;
-  width: 1000px;
   margin: auto;
-  justify-content: center;
-}
-
-.search-bar span {
-  background-color: #fff;
-  height: 25px;
-}
-
-.search-bar input {
-  padding: 10px;
-  width: 50%;
-  height: 25px;
-  font-size: 18px;
-  border-radius: 4px;
+  width: 1000px;
 }

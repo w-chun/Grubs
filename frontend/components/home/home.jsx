@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import FooterContainer from '../footer/footer_container';
+import Search from '../search/search';
 import { Link } from 'react-router-dom';
 
 export default class Home extends React.Component {
@@ -12,9 +13,8 @@ export default class Home extends React.Component {
             <div className="nav-center"><GreetingContainer /></div>
           </header>
           <div className="title-link"><h1><Link to="/" className="title">Grubs</Link></h1></div>
-          <div className="search-bar">
-            <input type="text"></input>
-
+          <div className="home-search-bar">
+            <Search />
           </div>
           <div className="home-nav-links-container">
             <div className="home-nav-links">

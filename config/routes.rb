@@ -7,6 +7,9 @@ Rails.application.routes.draw do
       resources :reviews, only: [:create, :index, :update]
     end
     resources :reviews, only: [:show, :destroy]
+    resources :business_searches, only: [:index] do
+      get "business_by_city", on: :collection
+    end
   end
 
   root "static_pages#root"
