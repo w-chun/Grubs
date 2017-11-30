@@ -16,6 +16,12 @@ export default class Header extends React.Component {
     };
   }
 
+  handleClick(e){
+    e.preventDefault();
+    this.props.fetchBusinesses()
+      .then(this.props.history.push("/businesses"));
+  }
+
   render() {
     let nav;
     if (this.props.currentUser) {
@@ -52,9 +58,9 @@ export default class Header extends React.Component {
         </div>
         <div className="header-nav-links">
           <div className="nav-links">
-            <Link to="/businesses">Restaurants</Link>
+            <button onClick={this.handleClick.bind(this)} className="restaurants-button">Restaurants</button>
             <a href="https://www.linkedin.com/in/wilson-chun-58a86891/">About Me</a>
-            <Link to=''>Write a Review</Link>
+            <a href='https://github.com/w-chun'>Github</a>
           </div>
         </div>
       </div>

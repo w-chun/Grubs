@@ -10,7 +10,7 @@ export default class Search extends React.Component {
   }
 
   update(field) {
-    return (e) => {
+      return (e) => {
       this.setState({[field]: e.currentTarget.value});
     };
   }
@@ -18,7 +18,11 @@ export default class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.searchBusinesses(this.state)
-      .then(this.props.history.push("/businesses"));
+      .then(this.props.history.push(`/businesses?near=${this.state.near}`));
+  }
+
+  clearSearch() {
+    this.props.clearSearch();
   }
 
   render() {

@@ -14,6 +14,14 @@ export const selectReviews = (state, businessId) => {
   return businessReviews;
 };
 
+export const selectImages = (state, businessId) => {
+  const images = asArray(state.entities.images);
+  const businessImages = images.filter(
+    (image) => image.business_id === parseInt(businessId)
+    );
+  return businessImages;
+};
+
 export const asArray = ( obj ) => (
   Object.keys(obj).map(key => obj[key])
 );

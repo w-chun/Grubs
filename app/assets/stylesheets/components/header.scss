@@ -37,6 +37,21 @@
   text-decoration: none;
 }
 
+.restaurants-button {
+  color: #fff;
+  padding: 3px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 21px;
+  background-color: #bd1f1f;
+  border: none;
+}
+
+.restaurants-button:hover {
+  background-color: #981616;
+  cursor: pointer;
+}
+
 .header-nav-links a:hover {
   background-color: #981616
 }

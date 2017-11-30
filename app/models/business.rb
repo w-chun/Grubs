@@ -21,6 +21,7 @@ class Business < ApplicationRecord
   validates :name, :address, :city, :state, :zipcode, :url, :img_url, presence: true
 
   has_many :reviews
+  has_many :images
 
   def self.search_results(query_params)
     param = '%' + query_params.downcase + '%'

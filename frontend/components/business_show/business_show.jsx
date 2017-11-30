@@ -4,7 +4,7 @@ import HeaderContainer from '../header/header_container';
 import BusinessDetails from './business_details';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import BusinessMap from '../business_map/business_map';
-
+import BusinessImagesContainer from '../business_images/business_images_container';
 
 export default class BusinessShow extends React.Component {
   constructor(props){

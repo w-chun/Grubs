@@ -5,11 +5,12 @@ import IndexItem from './business_index_item';
 import BusinessMapContainer from '../business_map/business_map_container';
 
 export default class BusinessIndex extends React.Component {
-
-  componentDidMount() {
-    this.props.fetchBusinesses();
+  componentWillMount(){
+    if (!this.props.location.search) {
+      this.props.fetchBusinesses();
+    }
   }
-
+  
   render() {
     const businesses = this.props.businesses;
     const businessesList = Object.keys(businesses).map(business => {
@@ -31,7 +32,6 @@ export default class BusinessIndex extends React.Component {
             <div className="filters">Filters</div>
             <div className="business-index">
               <div className="business-list">{businessesList}</div>
-              <BusinessMapContainer />
             </div>
           </div>
         );

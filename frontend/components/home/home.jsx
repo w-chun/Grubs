@@ -5,6 +5,11 @@ import Search from '../search/search_container';
 import { Link } from 'react-router-dom';
 
 export default class Home extends React.Component {
+  handleClick(e){
+    e.preventDefault();
+    this.props.history.push("/businesses");
+  }
+
   render() {
     return (
       <div className="home-container">
@@ -18,7 +23,7 @@ export default class Home extends React.Component {
           </div>
           <div className="home-nav-links-container">
             <div className="home-nav-links">
-              <Link to="/businesses">Restaurants</Link>
+              <button onClick={this.handleClick.bind(this)}>Restaurants</button>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import * as SearchAPIUtil from '../util/search_api_util';
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
 export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
 export const RECEIVE_SEARCH_RESULTS = "RECEIVE_SEARCH_RESULTS";
-
+export const CLEAR_SEARCH = "CLEAR_SEARCH";
 
 const receiveBusinesses = (businesses) => ({
   type: RECEIVE_BUSINESSES,
@@ -35,3 +35,7 @@ export const searchBusinesses = (query) => dispatch => (
   SearchAPIUtil.searchBusinesses(query)
     .then((searchResults) => dispatch(receiveSearchResults(searchResults)))
 );
+
+export const clearSearch = () => ({
+  type: CLEAR_SEARCH
+});

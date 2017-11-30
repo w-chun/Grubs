@@ -121,20 +121,19 @@
   justify-content: center;
 }
 
-.home-nav-links li {
-  list-style: none;
-}
-.home-nav-links a {
+.home-nav-links button {
+  background-color: transparent;
+  border: none;
   color: #fff;
   padding: 3px 15px;
   font-size: 15px;
   font-weight: bold;
   line-height: 21px;
-  text-decoration: none;
 }
 
-.home-nav-links a:hover {
+.home-nav-links button:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .home-search-bar {
