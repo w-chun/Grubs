@@ -6,6 +6,7 @@ export default class Search extends React.Component {
     this.state = {
       near: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {

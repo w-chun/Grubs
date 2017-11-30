@@ -1,7 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import FooterContainer from '../footer/footer_container';
-import Search from '../search/search';
+import Search from '../search/search_container';
 import { Link } from 'react-router-dom';
 
 export default class Home extends React.Component {

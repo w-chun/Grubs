@@ -5,7 +5,11 @@ class Api::BusinessesController < ApplicationController
   end
 
   def index
-    @businesses = Business.all
+    if (params[:search])
+      @businesses = Business.search_results(params[:search][:query][:near])
+    else
+      @businesses = Business.all
+    end
     render :index
   end
 
@@ -19,10 +23,4 @@ class Api::BusinessesController < ApplicationController
   def business_params
     params.require(:business).permit(:name, :address, :city, :state, :zipcode)
   end
-
-  def search_params
-    params.require(:search).permit(:query, :business_id)
-  end
 end
-
-# @businesses = Business.search_results(search_params[:query])

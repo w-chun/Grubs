@@ -1,4 +1,4 @@
-import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES } from '../actions/business_actions';
+import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES, RECEIVE_SEARCH_RESULTS } from '../actions/business_actions';
 import { RECEIVE_REVIEW } from '../actions/review_actions';
 import { merge } from 'lodash';
 
@@ -12,6 +12,8 @@ const businessesReducer = (state = {}, action ) => {
     case RECEIVE_REVIEW:
       const business = action.review.business;
       return merge({}, state, {[business.id]: business});
+    case RECEIVE_SEARCH_RESULTS:
+      return action.searchResults;
     default:
       return state;
   }

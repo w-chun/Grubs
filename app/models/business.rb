@@ -25,5 +25,5 @@ class Business < ApplicationRecord
   def self.search_results(query_params)
     param = '%' + query_params.downcase + '%'
     Business.where('lower(city) LIKE ?', param)
-  end 
+  end
 end
