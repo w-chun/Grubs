@@ -63,9 +63,7 @@ export default class BusinessShow extends React.Component {
         <div className="top-shelf-grey">
           <div className="business-show-container">
             <BusinessDetails business={business}/>
-            <div className="business-images-container">
-              <BusinessImagesContainer />
-            </div>
+            <BusinessImagesContainer />
           </div>
           <div className="review-link-wrapper">
             <div className="review-link">

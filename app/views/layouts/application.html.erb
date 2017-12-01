@@ -3,13 +3,16 @@
   <head>
     <title>Grubs</title>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css?family=Anton|Lobster" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAI3nAmR1VrXe3fH4N5iu6zNl_g56fcZAI"%>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAI3nAmR1VrXe3fH4N5iu6zNl_g56fcZAI"%>
   </head>
 
   <body>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <%= yield %>
   </body>
 </html>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from 'react-slick';
 
 export default class BusinessImages extends React.Component {
   componentDidMount() {
@@ -14,6 +15,21 @@ export default class BusinessImages extends React.Component {
         </div>
       );
     });
-    return images;
+    return (
+      <div className="business-images-wrapper">
+        <div className="business-images-container">
+        <Slider settings={
+          {dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToScroll: 1,
+            fade: true,
+            cssEase: 'linear'}
+          }>
+            {images}
+        </Slider>
+        </div>
+      </div>
+    );
   }
 }
