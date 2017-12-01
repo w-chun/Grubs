@@ -13,10 +13,10 @@ const getCoordsObj = latLng => ({
 
 const mapOptions = {
   center: {
-    lat: 37.773972,
-    lng: -122.43129
+    lat: 37.775230,
+    lng: -122.353134
   },
-  zoom: 12
+  zoom: 10
 };
 
 class BusinessMap extends React.Component {
@@ -24,16 +24,14 @@ class BusinessMap extends React.Component {
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
-    if (this.props.businesses && Object.keys(this.props.businesses).length > 0) {
+    if (this.props.businesses) {
       this.MarkerManager.updateMarkers(this.props.businesses);
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.businesses[0] !== nextProps.businesses[0]) {
-      nextProps.businesses.map(business => (
-        this.MarkerManager.createMarkerFromBusiness(business)
-      ));
+      this.MarkerManager.updateMarkers(nextProps.businesses);
     }
   }
 

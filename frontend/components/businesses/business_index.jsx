@@ -17,12 +17,14 @@ export default class BusinessIndex extends React.Component {
     const businessesList = Object.keys(businesses).map(business => {
       return <IndexItem key={`index-${business}`} business={businesses[business]}/>;
     });
-    if (!businesses) {
+    if (businessesList.length === 0) {
       return (
         <div className="business-index-container">
           <HeaderContainer />
+          <FilterContainer />
           <div className="business-index">
-            <h2>No Businesses Found!</h2>
+            <h2>Sorry, no businesses found!</h2>
+            <BusinessMapContainer />
           </div>
         </div>
       );

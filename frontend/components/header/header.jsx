@@ -59,8 +59,8 @@ export default class Header extends React.Component {
         <div className="header-nav-links">
           <div className="nav-links">
             <button onClick={this.handleClick.bind(this)} className="restaurants-button">Restaurants</button>
-            <a href="https://www.linkedin.com/in/wilson-chun-58a86891/">About Me</a>
-            <a href='https://github.com/w-chun'>Github</a>
+            <a href="https://www.linkedin.com/in/wilson-chun-58a86891/" target="_blank">About Me</a>
+            <a href='https://github.com/w-chun' target="_blank">Github</a>
           </div>
         </div>
       </div>

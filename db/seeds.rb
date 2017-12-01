@@ -45,9 +45,9 @@ business4 = Business.create(name: "Bun Bo Hue An Nam", address: "740 Story Rd", 
 business5 = Business.create(name: "Homeroom", address: "400 40th St", city: "Oakland", state: "CA",
   zipcode: 94609, phone: "(510) 597-0400", url: "homeroom510.com", latitude: 37.828514, longitude: -122.260099,
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_80,w_100/v1511589283/homeroom_mnzwsp.jpg")
-business6 = Business.create(name: "Southern Cafe", address: "2000 Macarthur Blvd", city: "Oakland", state: "CA",
-  zipcode: 94602, phone: "(510) 336-2013", url: "southerncafe2000.com", latitude: 37.801014, longitude: -122.218403,
-  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_100/v1511589685/southern_xwrlym.jpg")
+business6 = Business.create(name: "Shandong Restaurant", address: "328 10th St", city: "Oakland", state: "CA",
+  zipcode: 94607, phone: "(510) 839-2299", url: "shandongoakland.com", latitude: 37.800693, longitude: -122.269928,
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_80,w_100/v1512111784/shan-1_pqplxr.jpg")
 business7 = Business.create(name: "The Boiling Crab", address: "1631 E Capitol Expy", city: "San Jose", state: "CA",
   zipcode: 95121, phone: "(408) 532-6147", url: "theboilingcrab.com", latitude: 37.306420, longitude: -121.812422,
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_80,w_100/v1511589992/boiling_crab_jguxpj.jpg")
@@ -93,6 +93,35 @@ business_ids = (Business.first.id..Business.last.id).to_a
   )
 end
 
-Images.destroy_all
+Image.destroy_all
 
 image1 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512078654/benu-1_ebeumz.jpg', business_id: business1.id)
+image2 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512078654/benu_2_t7l61a.jpg', business_id: business1.id)
+image3 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512078654/benu3_tlr0iq.jpg', business_id: business1.id)
+image4 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111306/kusakabe_nvyudq.jpg', business_id: business2.id)
+image5 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111305/kusakabe-3_moyu5u.jpg', business_id: business2.id)
+image6 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111305/kusakabe-2_talrq5.jpg', business_id: business2.id)
+image7 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111305/little-3_tj0dwz.jpg', business_id: business3.id)
+image8 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111314/little-1_ohnui1.jpg', business_id: business3.id)
+image9 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111314/little-2_jlnfye.jpg', business_id: business3.id)
+image10 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111304/bbh1_olyk9n.jpg', business_id: business4.id)
+image11 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111306/bbh-3_phqezq.jpg', business_id: business4.id)
+image12 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111304/bbh-2_ymuzcc.jpg', business_id: business4.id)
+image13 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111305/homeroom_f4ot9w.jpg', business_id: business5.id)
+image14 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111304/homeroom-3_chb6yr.jpg', business_id: business5.id)
+image15 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111304/homeroom-2_wvrmju.jpg', business_id: business5.id)
+image16 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111784/shan-2_tupltg.jpg', business_id: business6.id)
+image17 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111784/shan-3_qd34ek.jpg', business_id: business6.id)
+image18 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512111784/shan-4_xj3grh.jpg', business_id: business6.id)
+image19 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112912/bc_eu7rwy.jpg', business_id: business7.id)
+image20 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112913/bc-2_zdzoa9.jpg', business_id: business7.id)
+image21 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112912/bc-3_mngypt.jpg', business_id: business7.id)
+image22 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112911/yum_mdllgx.jpg', business_id: business8.id)
+image23 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112911/yum-2_py9b8y.jpg', business_id: business8.id)
+image24 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112910/yum-3_brbcgr.jpg', business_id: business8.id)
+image25 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112911/ben_fbxnbt.jpg', business_id: business9.id)
+image26 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112910/ben-2_c7qlas.jpg', business_id: business9.id)
+image27 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112910/ben-3_mqeivm.jpg', business_id: business9.id)
+image28 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112911/hog_dik8hf.jpg', business_id: business10.id)
+image29 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112911/hog-2_cb9lb9.jpg', business_id: business10.id)
+image30 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512112912/hog-3_ie8joh.jpg', business_id: business10.id)

@@ -77,7 +77,6 @@ export default class ReviewForm extends React.Component {
     let button;
     let cancel;
     let name;
-    console.log(this.props.business.name);
     if (this.props.formType === 'edit') {
       name = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}><h1>{this.props.business.name}</h1></Link>;
       title = 'Update Review';

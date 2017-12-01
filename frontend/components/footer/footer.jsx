@@ -45,13 +45,13 @@ export default class Footer extends React.Component{
             <div className="footer-menu">
               <ul>
                 <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/wilson-chun-58a86891/"><div className="linkedin"></div></a>
+                <a href="https://www.linkedin.com/in/wilson-chun-58a86891/" target="_blank"><div className="linkedin"></div></a>
               </ul>
             </div>
             <div className="footer-menu">
               <ul>
                 <h3>Github</h3>
-                <li><a href="https://github.com/w-chun">
+                <li><a href="https://github.com/w-chun" target="_blank">
                   <img src="http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_30,w_30/v1511918810/github_ppy7nn.png"></img>
                     </a></li>
               </ul>

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import { postImage, fetchImages } from './util/image_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -16,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.postImage = postImage;
-  window.fetchImages = fetchImages;
 
   ReactDOM.render(<Root store={ store } />, root);
 });
