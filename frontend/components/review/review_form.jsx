@@ -78,7 +78,9 @@ export default class ReviewForm extends React.Component {
     let cancel;
     let name;
     if (this.props.formType === 'edit') {
-      name = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}><h1>{this.props.business.name}</h1></Link>;
+      name = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
+        <h1>{this.props.business ? this.props.business.name : ""}</h1>
+        </Link>;
       title = 'Update Review';
       button = <button onClick={this.handleDelete} className="post-review-button">
         <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
@@ -87,7 +89,9 @@ export default class ReviewForm extends React.Component {
         </button>;
       cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`} className="cancel-button">Cancel</Link>;
     } else {
-      name = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}><h1>{this.props.business.name}</h1></Link>;
+      name = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
+        <h1>{this.props.business ? this.props.business.name : ""}</h1>
+        </Link>;
       title = "Write a Review";
       cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`} className="cancel-button">Cancel</Link>;
     }

@@ -60,10 +60,11 @@ export default class BusinessShow extends React.Component {
     return (
       <div className="business-show-wrapper">
         <HeaderContainer />
-        <div className="top-shelf-grey">
+        <div className="business-show-super-container">
+          <BusinessImagesContainer />
+        <div className="top-shelf">
           <div className="business-show-container">
             <BusinessDetails business={business}/>
-            <BusinessImagesContainer />
           </div>
           <div className="bottom-container-wrapper">
           <div className="review-link-wrapper">
@@ -75,6 +76,7 @@ export default class BusinessShow extends React.Component {
             <ReviewIndexContainer />
           </div>
           </div>
+        </div>
         </div>
       </div>
     );
