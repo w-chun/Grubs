@@ -9,7 +9,12 @@ const IndexItem = ({ business }) => {
           <div className="business-link">
               <div className="business-profile">
                 <div className="business-image"><Link to={`/businesses/${business.id}`}><img className="index-image" src={business.img_url} /></Link></div>
-                <div className="business-title"><Link to={`/businesses/${business.id}`}>{business.name}</Link></div>
+                <div className="business-title">
+                  <Link to={`/businesses/${business.id}`}>{business.name}</Link>
+                    <div className="business-rating-holder">
+                      <div className="red-star-4"></div>
+                    </div>
+                  </div>
               </div>
           </div>
         </div>

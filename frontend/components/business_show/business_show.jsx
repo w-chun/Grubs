@@ -65,6 +65,7 @@ export default class BusinessShow extends React.Component {
             <BusinessDetails business={business}/>
             <BusinessImagesContainer />
           </div>
+          <div className="bottom-container-wrapper">
           <div className="review-link-wrapper">
             <div className="review-link">
               {this.reviewLink()}
@@ -72,6 +73,7 @@ export default class BusinessShow extends React.Component {
           </div>
           <div className="bottom-container">
             <ReviewIndexContainer />
+          </div>
           </div>
         </div>
       </div>
