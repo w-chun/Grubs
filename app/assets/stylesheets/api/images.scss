@@ -2,13 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.business-images-container {
+  display: flex;
+}
+
 .business-images {
   display: flex;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  padding-left: 20px;
 }
 
 .business-images img {
   margin: auto;
   width: 300px;
+  max-height: 250px;
 }

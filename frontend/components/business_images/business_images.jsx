@@ -9,10 +9,8 @@ export default class BusinessImages extends React.Component {
   render() {
     const images = this.props.images.map((image,i) => {
       return (
-        <div className="item-active">
-          <div key={`image-${i}`} className="business-images">
-              <img src={`${image.img_url}`}/>
-          </div>
+        <div key={`image-${i}`} className="business-images">
+          <img src={`${image.img_url}`}/>
         </div>
       );
     });

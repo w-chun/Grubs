@@ -51,9 +51,9 @@ export default class BusinessShow extends React.Component {
       return (
         <div className="business-show-wrapper">
           <HeaderContainer />
-          <div className="business-show-container">
-            <h2>Fetching Businesses...</h2>
-          </div>
+            <div className="business-index">
+              <h2>Sorry, no businesses found!</h2>
+            </div>
         </div>
       );
     } else {
@@ -63,14 +63,18 @@ export default class BusinessShow extends React.Component {
         <div className="top-shelf-grey">
           <div className="business-show-container">
             <BusinessDetails business={business}/>
-            <BusinessImagesContainer />
+            <div className="business-images-container">
+              <BusinessImagesContainer />
+            </div>
           </div>
           <div className="review-link-wrapper">
             <div className="review-link">
               {this.reviewLink()}
             </div>
           </div>
-          <ReviewIndexContainer />
+          <div className="bottom-container">
+            <ReviewIndexContainer />
+          </div>
         </div>
       </div>
     );
