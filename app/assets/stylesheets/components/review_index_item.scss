@@ -14,6 +14,7 @@
   width: 66.67%;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
+  padding-left: 20px;
 }
 
 .business-review-name {
@@ -26,17 +27,23 @@
   display: flex;
   width: 66.67%;
   flex-direction: column;
+  padding-left: 20px;
 }
+
 
 .reviews-list ul {
   padding: 0;
 }
+
 .review-index-wrapper {
   display: flex;
   border-bottom: 1px solid #ddd;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
   height: 100px;
+}
+
+.review-index-wrapper:first-child {
+  padding-top: 5px;
 }
 
 .review-index-container {

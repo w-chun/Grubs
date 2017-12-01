@@ -8,3 +8,12 @@ json.reviews do
     end
   end
 end
+json.images do
+  if @business.images
+    @business.images.each do |image|
+      json.set! image.id do
+        json.extract! image, :img_url, :business_id
+      end
+    end
+  end
+end

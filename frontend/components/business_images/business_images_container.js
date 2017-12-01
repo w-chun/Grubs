@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import BusinessImages from './business_images';
 import { fetchImages } from '../../actions/image_actions';
 import { fetchBusiness } from '../../actions/business_actions';
@@ -12,12 +13,12 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchImages: (businessId) => dispatch(fetchImages(businessId)),
-    fetchBusiness: (businessId) => dispatch(fetchBusiness(businessId))
+    fetchBusiness: (id) => dispatch(fetchBusiness(id)),
+    fetchImages: (businessId) => dispatch(fetchImages(businessId))
   };
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(BusinessImages);
+)(BusinessImages));

@@ -92,3 +92,7 @@ business_ids = (Business.first.id..Business.last.id).to_a
     body: body,
   )
 end
+
+Images.destroy_all
+
+image1 = Image.create(img_url:'http://res.cloudinary.com/dih798zsl/image/upload/v1512078654/benu-1_ebeumz.jpg', business_id: business1.id)

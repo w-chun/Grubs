@@ -15,13 +15,14 @@ export const selectReviews = (state, businessId) => {
 };
 
 export const selectImages = (state, businessId) => {
-  const images = asArray(state.entities.images);
-  const businessImages = images.filter(
-    (image) => image.business_id === parseInt(businessId)
-    );
-  return businessImages;
+  const images = asArray(state.entities.businesses[businessId].images);
+  return images;
 };
 
-export const asArray = ( obj ) => (
-  Object.keys(obj).map(key => obj[key])
-);
+export const asArray = ( obj ) => {
+  if (!obj) {
+    return [];
+  } else {
+    return Object.keys(obj).map(key => obj[key]);
+  }
+};

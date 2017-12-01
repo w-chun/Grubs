@@ -16,12 +16,14 @@ export default class BusinessShow extends React.Component {
   componentDidMount(){
     this.props.fetchBusiness(this.props.match.params.businessId);
     this.props.fetchReviews(this.props.match.params.businessId);
+    this.props.fetchImages(this.props.match.params.businessId);
   }
 
   componentWillReceiveProps(newProps){
     if (this.props.match.params.businessId !== newProps.match.params.businessId) {
       this.props.fetchBusiness(newProps.match.params.businessId);
-      this.props.fetchReviews(this.props.match.params.businessId);
+      this.props.fetchReviews(newProps.match.params.businessId);
+      this.props.fetchImages(newProps.match.params.businessId);
     }
   }
 
@@ -61,10 +63,11 @@ export default class BusinessShow extends React.Component {
         <div className="top-shelf-grey">
           <div className="business-show-container">
             <BusinessDetails business={business}/>
-            <div className="review-link-wrapper">
-              <div className="review-link">
-                {this.reviewLink()}
-              </div>
+            <BusinessImagesContainer />
+          </div>
+          <div className="review-link-wrapper">
+            <div className="review-link">
+              {this.reviewLink()}
             </div>
           </div>
           <ReviewIndexContainer />

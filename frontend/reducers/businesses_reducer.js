@@ -17,10 +17,10 @@ const businessesReducer = (state = {}, action ) => {
       return action.searchResults;
     case CLEAR_SEARCH:
       return {};
-    // case RECEIVE_IMAGES:
-    //   return action.images;
-    // case RECEIVE_IMAGE:
-    //   return merge({}, {[action.image.id]: action.image});
+    case RECEIVE_IMAGES:
+      return action.images;
+    case RECEIVE_IMAGE:
+      return merge({}, {[action.image.id]: action.image});
     default:
       return state;
   }
