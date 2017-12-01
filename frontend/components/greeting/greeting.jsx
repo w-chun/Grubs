@@ -12,7 +12,6 @@ const personalGreeting = (currentUser, logout) => (
   <header className="greeting">
     <div className="current-user">
       <div className="profile-pic"><img src={currentUser.img_url}/></div>
-      <h3>{currentUser.username}</h3>
      </div>
     <div className="home-logout"><button className="logout-button" onClick={logout}>Log Out</button></div>
   </header>

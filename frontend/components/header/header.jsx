@@ -29,7 +29,6 @@ export default class Header extends React.Component {
         <div className="greeting">
           <div className="current-user">
             <div className="profile-pic"><img src={this.props.currentUser.img_url}/></div>
-            <h3>{this.props.currentUser.username}</h3>
           </div>
           <div className="home-logout"><button className="logout-button" onClick={this.logout()}>Log Out</button></div>
         </div>

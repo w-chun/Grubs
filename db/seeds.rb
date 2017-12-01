@@ -8,8 +8,6 @@
 
 User.destroy_all
 
-demo = User.create(username: "demo", email: "demo_user@gmail.com", password: "password",
-  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png")
 user1 = User.create(username: "Wilson", email: "wilson@gmail.com", password: "password",
   img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,h_50,w_50/v1511930352/Wilson_Chun_1_rrpcpz.jpg" )
 user2 = User.create(username: "Kobe", email: "kobe@gmail.com", password: "password",
@@ -92,6 +90,9 @@ business_ids = (Business.first.id..Business.last.id).to_a
     body: body,
   )
 end
+
+demo = User.create(username: "demo", email: "demo_user@gmail.com", password: "password",
+  img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png")
 
 Image.destroy_all
 

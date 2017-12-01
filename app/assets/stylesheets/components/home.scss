@@ -70,10 +70,12 @@
 
 .profile-pic {
   padding: 10px 10px 0px 10px;
+  margin-bottom: 6px;
 }
 
-.current-user h3 {
-  margin: 0
+.profile-pic img {
+  border-radius: 4px;
+  width: 33px;
 }
 
 .home-logout {
