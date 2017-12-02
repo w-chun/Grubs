@@ -19,18 +19,18 @@ Grubs is a single-page web application that uses React and Redux for the fronten
 
 ### Homepage
 
-![Homepage]()
+![Homepage](https://github.com/w-chun/Grubs/blob/master/screenshots/Home%20Page.png)
 
 Grubs homepage allows a user to search for restaurants by location or check out all the restaurants available. A user has the option to login to Grubs or create a new account.
 
 ### Search
 
-![Search]()
+![Search](https://github.com/w-chun/Grubs/blob/master/screenshots/Search%20Page.png)
 
 Grubs search results page shows a list of all the restaurants or filters by the location inputted by the user. The map pinpoints the results found from the search and can be zoomed in to see where the restaurant is near or zoomed out to see other restaurants in other cities.
 
-```
-//search.jsx
+```javascript
+// search.jsx
 
 import React from 'react';
 
@@ -77,7 +77,7 @@ Implementing the search component came with some difficulty. The search results 
 
 ### Review
 
-![Review]()
+![Review](https://github.com/w-chun/Grubs/blob/master/screenshots/Review.png)
 
 A Grubs user, when logged in has the option to add a new review to a restaurant, edit a previous review that the user left, or delete the review.
 
