@@ -61,15 +61,18 @@ export default class ReviewForm extends React.Component {
       review = Object.assign({}, review,
         { body: this.state.body, rating: this.state.rating, id: this.props.match.params.reviewId}
         );
-      this.props.processForm(review, business.id, this.props.formType);
+      this.props.processForm(review, business.id, this.props.formType)
+        .then(this.props.history.push(`/businesses/${this.props.business ? this.props.business.id : ""}`));
     } else {
-      this.props.processForm(review, business.id, this.props.formType);
+      this.props.processForm(review, business.id, this.props.formType)
+        .then(this.props.history.push(`/businesses/${this.props.business ? this.props.business.id : ""}`));
     }
   }
 
   handleDelete(e) {
     e.preventDefault();
-    this.props.deleteReview(this.props.match.params.reviewId);
+    this.props.deleteReview(this.props.match.params.reviewId)
+      .then(this.props.history.push(`/businesses/${this.props.business ? this.props.business.id : ""}`));
   }
 
   render() {
@@ -83,9 +86,7 @@ export default class ReviewForm extends React.Component {
         </Link>;
       title = 'Update Review';
       button = <button onClick={this.handleDelete} className="post-review-button">
-        <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
           Delete Review
-        </Link>
         </button>;
       cancel = <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`} className="cancel-button">Cancel</Link>;
     } else {
@@ -105,6 +106,7 @@ export default class ReviewForm extends React.Component {
           <div className="review-title">
             <label>{title}</label>
           </div>
+          <form onSubmit={this.handleSubmit}>
           <div className="review-form-wrapper">
             <div className="your-review"><label>Your Review</label></div>
             <div className="review-form">
@@ -121,22 +123,19 @@ export default class ReviewForm extends React.Component {
                 <div className="rating-text"><label>Select Your Rating.</label></div>
               </div>
                 <div className="text-body">
-                  <textarea ref="Textarea" onChange={this.updateBody()} value={this.state.body} required="true"
+                  <textarea ref="Textarea" onChange={this.updateBody()} value={this.state.body} required
                     placeholder="Your review helps others learn about great local businesses.
                     Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.">
                   </textarea>
                 </div>
-            </div>
-            <div className="button-container">
-              <button onClick={this.handleSubmit} className="post-review-button">
-                <Link to={`/businesses/${this.props.business ? this.props.business.id : ""}`}>
-                  Post Review
-                </Link>
-              </button>
-              <div>{button}</div>
-              <div className="cancel-button-wrapper">{cancel}</div>
+                <div className="button-container">
+                  <input type="submit" value="Post Review" className="post-review-button"></input>
+                  <div>{button}</div>
+                  <div className="cancel-button-wrapper">{cancel}</div>
+                </div>
             </div>
           </div>
+        </form>
         </div>
       </div>
     );

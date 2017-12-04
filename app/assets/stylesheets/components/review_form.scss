@@ -86,6 +86,8 @@
 
 .button-container {
   display: flex;
+  margin-top: 15px;
+  margin-left: -15px;
 }
 
 .post-review-button {
@@ -100,7 +102,8 @@
 }
 
 .post-review-button:hover {
-  background-color: #d32323;
+  cursor: pointer;
+  background-color: #ed0008;
 }
 
 .post-review-button a {

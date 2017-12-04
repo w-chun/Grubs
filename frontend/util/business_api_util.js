@@ -1,15 +1,13 @@
 export const fetchBusinesses = () => (
   $.ajax({
     method: "GET",
-    url: '/api/businesses',
-    error: (err) => console.log(err)
+    url: '/api/businesses'
   })
 );
 
 export const fetchBusiness = (id) => (
   $.ajax({
     method: "GET",
-    url: `/api/businesses/${id}`,
-    error: (err) => console.log(err)
+    url: `/api/businesses/${id}`
   })
 );
