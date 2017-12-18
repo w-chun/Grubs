@@ -64,7 +64,7 @@ Review.destroy_all
 author_ids = (User.first.id..User.last.id).to_a
 business_ids = (Business.first.id..Business.last.id).to_a
 
-100.times do
+300.times do
   random = rand(1..10)
   case random
   when 1 || 5
