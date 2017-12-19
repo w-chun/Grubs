@@ -108,5 +108,26 @@
 .bottom-container {
   display: flex;
   width: 1000px;
-  margin: auto;
+}
+
+.bottom-container-2-3 {
+  display: flex;
+  width: 33.33%;
+  padding-left: 30px;
+  flex-direction: column;
+}
+
+.business-info-text {
+  color: #d32323;
+  font-weight: bold;
+}
+
+.business-info-list {
+  list-style: none;
+  margin-left: -40px
+}
+
+.business-info-list li {
+  padding-bottom: 5px;
+  font-size: 14px;
 }
