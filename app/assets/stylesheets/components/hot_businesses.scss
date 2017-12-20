@@ -1,6 +1,6 @@
 .hot-businesses-wrapper {
   display: flex;
-  width: 1000px;
+  width: 100%;
   margin: auto;
 }
 
@@ -42,6 +42,8 @@
 .hot-business-item img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  width: 250px;
+  height: 200px;
 }
 
 .hot-business-info {
