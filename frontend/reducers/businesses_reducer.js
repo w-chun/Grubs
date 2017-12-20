@@ -1,5 +1,5 @@
 import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES, RECEIVE_SEARCH_RESULTS,
-          CLEAR_SEARCH, RECEIVE_IMAGE, RECEIVE_IMAGES } from '../actions/business_actions';
+        CLEAR_SEARCH, RECEIVE_IMAGE, RECEIVE_IMAGES } from '../actions/business_actions';
 import { RECEIVE_REVIEW } from '../actions/review_actions';
 import { merge } from 'lodash';
 

@@ -1,15 +1,18 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import HotBusinesses from './hot_businesses';
+import { asArray } from '../../reducers/selectors';
+import { fetchBusinesses } from '../../actions/business_actions';
 
-const mapStateToProps = state => ({
-
+export const mapStateToProps = state => ({
+  businesses: asArray(state.entities.businesses)
 });
 
-const mapDispatchToProps = dispatch => ({
-
+export const mapDispatchToProps = dispatch => ({
+  fetchBusinesses: () => dispatch(fetchBusinesses())
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(HotBusinesses);
+)(HotBusinesses));

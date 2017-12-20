@@ -1,0 +1,53 @@
+.hot-businesses-wrapper {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+}
+
+.hot-businesses-container {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  color: #d32323;
+  font-size: 16px;
+  font-weight: 700;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.hot-businesses {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  width: 100%;
+}
+
+.hot-business-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.hot-business-item a{
+  text-decoration: none;
+  color: #0073bb;
+}
+
+.hot-business-item a:hover{
+  text-decoration: underline;
+}
+
+.hot-business-item img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.hot-business-info {
+  padding: 15px;
+}
+
+.hot-business-rating {
+  padding-top: 3px;
+}
