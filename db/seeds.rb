@@ -67,16 +67,16 @@ business_ids = (Business.first.id..Business.last.id).to_a
 300.times do
   random = rand(1..10)
   case random
-  when 1 || 5
+  when 1 || 2
     rating = 1
     body = "Super long wait for a table. Service was horrible and the food was cold."
-  when 2 || 6
+  when 3 || 4
     rating = 2
     body = "This place is really dirty, but the food didn't taste that bad."
-  when 3 || 7
+  when 5 || 6
     rating = 3
     body = "Food was decent. Service was alright. Could be better."
-  when 4 || 8
+  when 7 || 8
     rating = 4
     body = "Everything was solid. Would come back here again."
   else
