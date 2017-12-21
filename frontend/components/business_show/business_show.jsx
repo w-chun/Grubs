@@ -76,16 +76,17 @@ export default class BusinessShow extends React.Component {
             <ReviewIndexContainer />
             <div className="bottom-container-2-3">
               <h3 className="business-info-text">Hours</h3>
-              <ul className="business-info-list">
-                <li><b>Mon</b>     10:30 am - 10:00 pm</li>
-                <li><b>Tues</b>    10:30 am - 10:00 pm</li>
-                <li><b>Wed</b>     10:30 am - 10:00 pm</li>
-                <li><b>Thur</b>    10:30 am - 10:00 pm</li>
-                <li><b>Fri</b>     10:30 am - 10:00 pm</li>
-                <li><b>Sat</b>     10:30 am - 10:00 pm</li>
-                <li><b>Sun</b>     10:30 am - 10:00 pm</li>
-
-              </ul>
+                <table>
+                  <tbody className="business-hours">
+                    <tr><th>Mon</th><td>11:00 am - 10:00 pm</td></tr>
+                    <tr><th>Tue</th><td>11:00 am - 10:00 pm</td></tr>
+                    <tr><th>Wed</th><td>11:00 am - 10:00 pm</td></tr>
+                    <tr><th>Thu</th><td>11:00 am - 10:00 pm</td></tr>
+                    <tr><th>Fri</th><td>11:00 am - 10:00 pm</td></tr>
+                    <tr><th>Sat</th><td>10:00 am - 10:00 pm</td></tr>
+                    <tr><th>Sun</th><td>10:00 am - 10:00 pm</td></tr>
+                  </tbody>
+                </table>
               <h3 className="business-info-text">More business info</h3>
               <ul className="business-info-list">
                 <li>Takes Reservations  <b>Yes</b></li>
@@ -124,16 +125,3 @@ export default class BusinessShow extends React.Component {
     }
   }
 }
-
-// <table>
-//   <tbody>
-//     <tr><th>Mon</th><td>10:30 am - 10:00 pm</td></tr>
-//     <tr><th>Tue</th><td>10:30 am - 10:00 pm</td></tr>
-//     <tr><th>Wed</th><td>10:30 am - 10:00 pm</td></tr>
-//     <tr><th>Thu</th><td>10:30 am - 10:00 pm</td></tr>
-//     <tr><th>Fri</th><td>10:30 am - 10:00 pm</td></tr>
-//     <tr><th>Sat</th><td>10:30 am - 10:00 pm</td></tr>
-//     <tr><th>Sun</th><td>10:30 am - 10:00 pm</td></tr>
-//   </tbody>
-// </table>
-//

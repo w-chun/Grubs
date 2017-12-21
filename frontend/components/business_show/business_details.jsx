@@ -41,7 +41,7 @@ const BusinessDetails = ({ business }) => {
           <li>{business.address}</li>
           <li>{business.city}, {business.state} {business.zipcode}</li>
           <li>{business.phone}</li>
-          <li><a href={`https://www.${business.url}`}>{business.url}</a></li>
+          <li><a href={`https://www.${business.url}`} target="_blank">{business.url}</a></li>
         </div>
       </div>
     </div>
