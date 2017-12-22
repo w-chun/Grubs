@@ -36,6 +36,7 @@
 .review-form-wrapper {
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 100%;
 }
 
 .your-review {
@@ -53,8 +54,8 @@
   border-radius: 3px;
   box-sizing: border-box;
   margin-bottom: 12px;
-  width: 600px;
-  height: 200px;
+  width: 60%;
+  height: 20%;
 }
 
 .rating {
@@ -87,7 +88,6 @@
 .button-container {
   display: flex;
   margin-top: 15px;
-  margin-left: -15px;
 }
 
 .post-review-button {

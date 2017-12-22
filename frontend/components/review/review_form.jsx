@@ -128,11 +128,11 @@ export default class ReviewForm extends React.Component {
                     Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.">
                   </textarea>
                 </div>
-                <div className="button-container">
-                  <input type="submit" value="Post Review" className="post-review-button"></input>
-                  <div>{button}</div>
-                  <div className="cancel-button-wrapper">{cancel}</div>
-                </div>
+            </div>
+            <div className="button-container">
+              <input type="submit" value="Post Review" className="post-review-button"></input>
+              <div>{button}</div>
+              <div className="cancel-button-wrapper">{cancel}</div>
             </div>
           </div>
         </form>
