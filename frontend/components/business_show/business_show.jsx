@@ -73,7 +73,9 @@ export default class BusinessShow extends React.Component {
             </div>
           </div>
           <div className="bottom-container">
-            <ReviewIndexContainer />
+            <div className="bottom-container-1-3">
+              <ReviewIndexContainer />
+            </div>
             <div className="bottom-container-2-3">
               <h3 className="business-info-text">Hours</h3>
                 <table>
