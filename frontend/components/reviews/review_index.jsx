@@ -14,8 +14,7 @@ export default class ReviewIndex extends React.Component {
     });
     return (
       <div className="review-index-item-wrapper">
-        <h2 className="recommended-reviews">Recommended Reviews
-        <div className="business-review-name">for {business.name}</div>
+        <h2 className="recommended-reviews">Recommended Reviews <b className="business-review-name">for {business.name}</b>
         </h2>
         <div className="reviews-list">
           <ul>
