@@ -7,10 +7,10 @@
 
 .header-nav {
   display: flex;
-  width: 80%;
+  width: 70%;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
+  ;
 }
 
 .header-nav-links {
@@ -21,7 +21,7 @@
 
 .nav-links {
   display: flex;
-  width: 80%;
+  width: 70%;
   margin: auto;
   padding-right: 5px;
 }
@@ -46,6 +46,7 @@
   line-height: 21px;
   background-color: #bd1f1f;
   border: none;
+  margin-left: -12px;
 }
 
 .restaurants-button:hover {

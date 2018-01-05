@@ -5,7 +5,7 @@
 
 .business-show-container {
   display: flex;
-  width: 80%;
+  width: 70%;
   margin: auto;
   max-height: 400px;
 }
@@ -13,7 +13,7 @@
 .business-details {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  ;
 }
 
 .business-rating-holder {
@@ -67,7 +67,7 @@
 .bottom-container-wrapper {
   display: flex;
   margin: auto;
-  width: 80%;
+  width: 70%;
   margin-top: 50px;
   flex-direction: column;
 }
@@ -111,12 +111,12 @@
 
 .bottom-container-1-3 {
   display: flex;
-  width: 66.67%
+  // width: 66.67%
 }
 
 .bottom-container-2-3 {
   display: flex;
-  width: 33.33%;
+  // width: 33.33%;
   padding-left: 50px;
   flex-direction: column;
 }
