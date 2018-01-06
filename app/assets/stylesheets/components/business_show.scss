@@ -62,6 +62,7 @@
   background: transparent;
   border-bottom: 1px solid #e6e6e6;
   height: 400px;
+  min-width: 1100px;
 }
 
 .bottom-container-wrapper {
@@ -73,16 +74,14 @@
 }
 
 .review-link-wrapper {
-  margin-left: 20px;
   display: flex;
-  width: 66.67%;
+  width: 75%;
   justify-content: flex-end;
 }
 
 .review-link {
   display: flex;
   justify-content: center;
-  margin-right: 10px;
 }
 
 .review-link a {
@@ -107,6 +106,7 @@
 .bottom-container {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .bottom-container-1-3 {
