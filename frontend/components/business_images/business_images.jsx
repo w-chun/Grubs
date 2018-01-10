@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class BusinessImages extends React.Component {
   componentDidMount() {
-    this.props.fetchBusiness(this.props.business);
+    this.props.fetchBusiness(this.props.match.params.businessId);
     this.props.fetchImages(this.props.match.params.businessId);
   }
 
