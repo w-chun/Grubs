@@ -12,7 +12,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <Favicon url="http://res.cloudinary.com/dih798zsl/image/upload/v1511918737/26240912-illustration-of-funny-chef-with-toque-presenting-his-stars-Stock-Illustration_ruu4ja.jpg"/>
+    <Favicon url="https://res.cloudinary.com/dih798zsl/image/upload/v1511918737/26240912-illustration-of-funny-chef-with-toque-presenting-his-stars-Stock-Illustration_ruu4ja.jpg"/>
     <Switch>
       <Route exact path="/" component={HomeContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />

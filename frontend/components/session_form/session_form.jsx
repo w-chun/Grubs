@@ -13,7 +13,7 @@ class SessionForm extends React.Component {
       username: "",
       email: "",
       password: "",
-      img_url: "http://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png"
+      img_url: "https://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_50/v1511461159/765-default-avatar_zsj3xt.png"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
@@ -140,7 +140,7 @@ class SessionForm extends React.Component {
               </div>
             </div>
             <div className="session-img">
-              <img src="http://res.cloudinary.com/dih798zsl/image/upload/v1511460944/signup_illustration_gjosky.png"></img>
+              <img src="https://res.cloudinary.com/dih798zsl/image/upload/v1511460944/signup_illustration_gjosky.png"></img>
             </div>
         </div>
       </div>
