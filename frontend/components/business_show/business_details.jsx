@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import BusinessMapContainer from '../business_map/business_map_container';
 
 
 const BusinessDetails = ({ business }) => {
@@ -35,7 +36,7 @@ const BusinessDetails = ({ business }) => {
       </h1>
       <div className="business-details-location">
         <div className="business-map">
-          <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${business.latitude},${business.longitude}&zoom=15&size=300x200&markers=color:red%7C%7C${business.latitude},${business.longitude}&key=AIzaSyAI3nAmR1VrXe3fH4N5iu6zNl_g56fcZAI`}/>
+          <BusinessMapContainer />
         </div>
         <div className="business-details-info">
           <li>{business.address}</li>
@@ -49,3 +50,5 @@ const BusinessDetails = ({ business }) => {
 };
 
 export default BusinessDetails;
+
+// <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${business.latitude},${business.longitude}&zoom=15&size=300x200&markers=color:red%7C%7C${business.latitude},${business.longitude}&key=AIzaSyAI3nAmR1VrXe3fH4N5iu6zNl_g56fcZAI`}/>

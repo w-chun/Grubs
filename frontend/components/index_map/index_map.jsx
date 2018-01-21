@@ -11,16 +11,17 @@ const getCoordsObj = latLng => ({
   lng: latLng.lng()
 });
 
-class BusinessMap extends React.Component {
+const mapOptions = {
+  center: {
+    lat: 37.775230,
+    lng: -122.353134
+  },
+  zoom: 10
+};
+
+class IndexMap extends React.Component {
   componentDidMount() {
     const map = this.refs.map;
-    const mapOptions = {
-      center: {
-        lat: this.props.businesses[0].latitude,
-        lng: this.props.businesses[0].longitude
-      },
-      zoom: 15
-    };
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     if (this.props.businesses) {
@@ -30,27 +31,17 @@ class BusinessMap extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.businesses[0] !== nextProps.businesses[0]) {
-      const map = this.refs.map;
-      const mapOptions = {
-        center: {
-          lat: this.props.businesses[0].latitude,
-          lng: this.props.businesses[0].longitude
-        },
-        zoom: 14
-      };
-      this.map = new google.maps.Map(map, mapOptions);
-      this.MarkerManager = new MarkerManager(this.map);
       this.MarkerManager.updateMarkers(nextProps.businesses);
     }
   }
 
   render() {
     return (
-      <div className="business-map-container">
-        <div id="businessmap" ref="map">Map</div>
+      <div className="map-container">
+        <div id="indexmap" ref="map">Map</div>
       </div>
     );
   }
 }
 
-export default BusinessMap;
+export default IndexMap;
