@@ -67,10 +67,23 @@ class SessionForm extends React.Component {
   handleDemo() {
     return (e) => {
       e.preventDefault();
-      this.setState({username: "demo", password: "password"}, () => {
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user, 'login');
-      });
+      const username = 'demo'.split('');
+      const password = 'password'.split('');
+      const demoInterval = setInterval(() => {
+        if (username.length > 0) {
+          this.setState({
+            username: this.state.username + username.shift()
+          }) ;
+        } else if (password.length > 0) {
+          this.setState({
+            password: this.state.password + password.shift()
+          });
+        } else {
+          const user = Object.assign({}, this.state);
+          clearInterval(demoInterval);
+          this.props.processForm(user, 'login');
+        }
+      }, 100);
     };
   }
 
