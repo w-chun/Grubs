@@ -9,6 +9,11 @@ export default class Search extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // componentDidMount() {
+  //   var input = document.getElementById('autocomplete');
+  //   var autocomplete = new google.maps.places.Autocomplete(input);
+  // }
+
   update(field) {
       return (e) => {
       this.setState({[field]: e.currentTarget.value});
@@ -28,7 +33,7 @@ export default class Search extends React.Component {
   render() {
     return (
       <form className="search-bar">
-        <input onChange={this.update("near")} value={this.state.near} placeholder="Search by location"></input>
+        <input onChange={this.update("near")} value={this.state.near} placeholder="Search by location" id='autocomplete'></input>
         <button onClick={this.handleSubmit} className="search-icon">
           <img src="https://res.cloudinary.com/dih798zsl/image/upload/c_scale,w_25/v1512001142/search-icon-white-one-hi_lw3har.png" />
         </button>

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Anton|Lobster" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAI3nAmR1VrXe3fH4N5iu6zNl_g56fcZAI"%>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAI3nAmR1VrXe3fH4N5iu6zNl_g56fcZAI&libraries=places"%>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113129036-1"></script>
     <script>
@@ -21,7 +21,6 @@
   </head>
 
   <body>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script>
     <%= yield %>
   </body>
 </html>
