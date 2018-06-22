@@ -11,7 +11,16 @@ export default class Search extends React.Component {
 
   // componentDidMount() {
   //   var input = document.getElementById('autocomplete');
-  //   var autocomplete = new google.maps.places.Autocomplete(input);
+  //   var options = {
+  //     types: ['(cities)'],
+  //     componentRestrictions: {country: 'usa'}
+  //   };
+  //   var autocomplete = new google.maps.places.Autocomplete(input, options);
+  //   autocomplete.addListener('place_changed', function(){
+  //     var place = autocomplete.getPlace();
+  //     var city = place.formatted_address.split(",")[0];
+  //     input.value = city;
+  //   });
   // }
 
   update(field) {
