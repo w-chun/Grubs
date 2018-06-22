@@ -10,22 +10,26 @@ export default class Filter extends React.Component {
 
   searchSF(e) {
     e.preventDefault();
-    this.props.searchBusinesses({near: "San Francisco"});
+    this.props.searchBusinesses({near: "San Francisco"})
+      .then(this.props.history.push(`/businesses?near=san%20francisco`));
   }
 
   searchSSF(e) {
     e.preventDefault();
-    this.props.searchBusinesses({near: "South San Francisco"});
+    this.props.searchBusinesses({near: "South San Francisco"})
+      .then(this.props.history.push(`/businesses?near=south%20san%20francisco`));
   }
 
   searchSJ(e) {
     e.preventDefault();
-    this.props.searchBusinesses({near: "San Jose"});
+    this.props.searchBusinesses({near: "San Jose"})
+      .then(this.props.history.push(`/businesses?near=san%20jose`));
   }
 
   searchOAK(e) {
     e.preventDefault();
-    this.props.searchBusinesses({near: "Oakland"});
+    this.props.searchBusinesses({near: "Oakland"})
+      .then(this.props.history.push(`/businesses?near=oakland`));
   }
 
   render() {

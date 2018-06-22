@@ -37,7 +37,7 @@ class IndexMap extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.businesses[0] !== nextProps.businesses[0]) {
+    if (this.props.businesses[0] !== nextProps.businesses[0] && nextProps.businesses[0]) {
       const map = this.refs.map;
       const mapOptions = {
         center: {
