@@ -9,19 +9,20 @@ export default class Search extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentDidMount() {
-  //   var input = document.getElementById('autocomplete');
-  //   var options = {
-  //     types: ['(cities)'],
-  //     componentRestrictions: {country: 'usa'}
-  //   };
-  //   var autocomplete = new google.maps.places.Autocomplete(input, options);
-  //   autocomplete.addListener('place_changed', function(){
-  //     var place = autocomplete.getPlace();
-  //     var city = place.formatted_address.split(",")[0];
-  //     input.value = city;
-  //   });
-  // }
+  componentDidMount() {
+    var input = document.getElementById('autocomplete');
+    var options = {
+      types: ['(cities)'],
+      componentRestrictions: {country: 'usa'}
+    };
+    var autocomplete = new google.maps.places.Autocomplete(input, options);
+    var that = this;
+    autocomplete.addListener('place_changed', function(){
+      var place = autocomplete.getPlace();
+      var city = place.formatted_address.split(",")[0];
+      that.setState({near : city});
+    });
+  }
 
   update(field) {
       return (e) => {
