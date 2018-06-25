@@ -67,6 +67,7 @@ class SessionForm extends React.Component {
   handleDemo() {
     return (e) => {
       e.preventDefault();
+      this.setState({username: "", password: ""});
       const username = 'demo'.split('');
       const password = 'password'.split('');
       const demoInterval = setInterval(() => {
